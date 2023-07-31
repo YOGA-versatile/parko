@@ -2,7 +2,7 @@
   <div class="nav"></div>
   <nav class="nav custom-common-header">
     <ul>
-        <img src="asset/pics/parko.png" height="150px";>
+        <img src="asset/pics/parko.png" height="55px";>
         <!-- <p class="nav-link" aria-current="page" href="#">PARKO</p> -->
     </ul>
     <ul class="nav ms-auto me-0"> <!-- Added ms-auto and me-0 classes -->
