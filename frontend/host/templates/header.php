@@ -1,15 +1,22 @@
 <div class="container custom-common-container">
-  <div class="nav"></div>
-  <nav class="nav custom-common-header">
-    <ul>
-        <p class="nav-link" aria-current="page" href="#">PARKO</p>
+  <nav class="nav custom-common-header navbar-expand-lg">
+    <ul class="align-items-left">
+        <img class="icon" src="asset/pics/parko.png">
     </ul>
-    <ul class="nav ms-auto me-0"> <!-- Added ms-auto and me-0 classes -->
+    <ul class="nav ms-auto align-items-center">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        <a class="nav-link" href="index.php">Home</i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">Profile</a>
+        <a class="nav-link" href="calender.php">Calender</i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Inbox</i></a>
+      </li>
+    </ul>
+    <ul class="nav ms-auto align-items-right">
+      <li class="nav-item">
+        <p class="nav-link" href="profile.php"><i class="bi bi-person-lines-fill"></i></p>
       </li>
     </ul>
   </nav>
