@@ -31,3 +31,14 @@
     margin-top: 5%;
     height: 80%;
 }
+.btn-primary{
+    background-color: #52ab98;
+    border-color: #52ab98;
+}
+.btn-primary:hover{
+    background-color: #2b6777;
+}
+.btn.active {
+    background-color: #2b6777;
+    color: #fff;
+}
