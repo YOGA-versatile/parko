@@ -18,10 +18,78 @@ include "libs/load.php";
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
 </head>
 
 <body>
+  <!-- header -->
     <?php load_temp("header.php"); ?>
+
+    <!-- jumbotron -->
+    <div class="p-5 mb-4 rounded-3 jumbo-tron-container">
+      <div class="container-fluid py-5 jumbo-tron">
+        <h1 class="display-6 fw-bold">Hello Host</h1>
+        <p class="col-md-8 fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corporis enim, ex itaque temporibus laudantium sunt ab earum officiis eum laboriosam eius nam </p>
+        <button class="btn btn-primary btn-lg" type="button">Listing</button>
+      </div>
+    </div>
+
+    <!-- control card -->
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <!-- Button group 1 -->
+                <div class="btn-group mr-2" role="group" id="buttonGroup1">
+                    <button type="button" class="btn btn-primary active" data-target="content1">Button 1</button>
+                    <button type="button" class="btn btn-primary" data-target="content2">Button 2</button>
+                    <button type="button" class="btn btn-primary" data-target="content3">Button 3</button>
+                </div>
+
+                <!-- Button group 2 -->
+                <div class="btn-group mr-2" role="group" id="buttonGroup2">
+                    <!-- Add more buttons here if needed -->
+                </div>
+
+                <!-- Button group 3 -->
+                <div class="btn-group" role="group" id="buttonGroup3">
+                    <!-- Add more buttons here if needed -->
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="content1" class="content">
+                    <!-- Content for Button 1 -->
+                    <h5 class="card-title">Present</h5>
+                    <p class="card-text">PresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresentPresent</p>
+                </div>
+                <div id="content2" class="content" style="display: none;">
+                    <!-- Content for Button 2 -->
+                    <h5 class="card-title">Button 2 Content</h5>
+                    <p class="card-text">This is the content for Button 2.</p>
+                </div>
+                <div id="content3" class="content" style="display: none;">
+                    <!-- Content for Button 3 -->
+                    <h5 class="card-title">Button 3 Content</h5>
+                    <p class="card-text">This is the content for Button 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php load_temp("footer.php"); ?>
+    <!-- Add the Bootstrap JS and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Handle button clicks to show the corresponding content
+            $('.btn').on('click', function() {
+                var targetContent = $(this).data('target');
+                $('.content').hide();
+                $('#' + targetContent).show();
+            });
+        });
+    </script>
+
 </body>

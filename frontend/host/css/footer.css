@@ -2,7 +2,7 @@ body{
     font-family: 'Heebo';
 }
 .custom-common-footer{
-    position: fixed;
+    position: relative;
     right : 0 ;
     left: 0;
     bottom: 5;
@@ -19,4 +19,7 @@ body{
     border-left-color:#ffffff ;
     border-right-color:#ffffff ;
     border-width: 1px;
+}
+.custom-footer a{
+    font-size: 15px;
 }
