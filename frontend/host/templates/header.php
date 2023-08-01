@@ -1,16 +1,11 @@
 <div class="container custom-common-container">
-  <div class="nav"></div>
   <nav class="nav custom-common-header">
     <ul>
-        <img src="asset/pics/parko.png" height="55px";>
-        <!-- <p class="nav-link" aria-current="page" href="#">PARKO</p> -->
+        <img class="icon" src="asset/pics/parko.png">
     </ul>
-    <ul class="nav ms-auto me-0"> <!-- Added ms-auto and me-0 classes -->
+    <ul class="nav ms-auto me-0">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="profile.php">Profile</a>
+        <a class="nav-link" href="profile.php"><i class="bi bi-person-lines-fill"></i></a>
       </li>
     </ul>
   </nav>

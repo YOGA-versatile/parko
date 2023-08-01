@@ -1,0 +1,15 @@
+.custom-common-container{
+    width:100%;
+    height:8%;
+}
+.custom-common-header{
+    margin-top: 4%;
+    width:100%;
+    height:100%;
+    position: relative;
+    border-style: solid;
+    border-bottom-color:red ;
+}
+.icon{
+    height: 90%;
+}
