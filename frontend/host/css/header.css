@@ -1,15 +1,37 @@
+body{
+    font-family: 'Heebo';
+}
 .custom-common-container{
     width:100%;
-    height:8%;
+    height:9%;
 }
 .custom-common-header{
-    margin-top: 4%;
+    margin-top: 2%;
     width:100%;
     height:100%;
     position: relative;
     border-style: solid;
-    border-bottom-color:red ;
+    border-radius: 16px;
+    border-color: #c8d8e4;
+    border-width: 1px;
+}
+.custom-common-header a{
+    font-size: 18px;
+    color: #2b6777;
+}
+.custom-common-header a:hover{
+    color: #c8d8e4;
+}
+
+.custom-common-header p{
+    margin-top: 8%;
+    font-size: 28px;
+    color: #52ab98;
+}
+.custom-common-header p:hover{
+    color: #2b6777;
 }
 .icon{
-    height: 90%;
+    margin-top: 5%;
+    height: 100%;
 }
