@@ -30,7 +30,7 @@ include "libs/load.php";
       <div class="container-fluid py-5 jumbo-tron">
         <h1 class="display-6 fw-bold">Hello Host</h1>
         <p class="col-md-8 fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corporis enim, ex itaque temporibus laudantium sunt ab earum officiis eum laboriosam eius nam </p>
-        <button class="btn btn-primary btn-lg" type="button" href="listing.php">Listing</button>
+        <a class="btn btn-primary btn-lg" href="listing.php">Listing</a>
       </div>
     </div>
 
