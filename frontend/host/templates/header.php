@@ -4,7 +4,6 @@
             <div class="navbar-brand">
             <img class="icon justify-content-left" height="10px" src="../asset/pics/parko.png">
             </div>
-
             <!-- Center-aligned item -->
             <ul class="navbar-nav mx-auto nav-pills">
               <li class="nav-item">

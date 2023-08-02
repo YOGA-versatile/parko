@@ -5,6 +5,7 @@ include "../libs/load.php";
 <html lang="en" data-bs-theme="auto">
   <head>
     <script src="../vendor/assets/js/color-modes.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -196,5 +197,6 @@ include "../libs/load.php";
             });
         });
     </script>
+
 
 </body>
