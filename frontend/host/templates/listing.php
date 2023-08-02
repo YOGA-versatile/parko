@@ -18,7 +18,7 @@ include "../libs/load.php";
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/listing.css">
   </head>
 </head>
 
@@ -73,6 +73,16 @@ include "../libs/load.php";
               <label for="spacePincode" class="form-label">Pin Code</label>
               <input type="number" class="form-control" min="100000" max="999999" id="spacePincode" required>
             </div>
+            <div class="mb-2">
+              <label for="mapLocation" class="form-label">Location</label>
+              <input type="text" class="form-control" id="mapLocation" readonly>
+              <div class="container map-container mt-2">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Iste aperiam, voluptatem sequi alias earum dignissimos libero 
+                quibusdam tempora autem adipisci perferendis provident fuga 
+                exercitationem tempore quas temporibus accusamus vitae voluptate!
+              </div>
+            </div>
             <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
           </form>
         </div>
@@ -86,6 +96,9 @@ include "../libs/load.php";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
+      var yourVariable = "Hello, this is a fixed input!";
+      var fixedInput = document.getElementById("mapLocation");
+      fixedInput.value = yourVariable;
       document.getElementById("addCardBtn").addEventListener("click", function () {
       // Empty the form fields when the modal is shown
       document.getElementById("inputModal").addEventListener("show.bs.modal", function () {
