@@ -2,7 +2,7 @@
         <div class="container-md custom-common-header">
             <!-- Left-aligned item -->
             <div class="navbar-brand">
-            <img class="icon justify-content-left" src="asset/pics/parko.png">
+            <img class="icon justify-content-left" height="10px" src="asset/pics/parko.png">
             </div>
 
             <!-- Center-aligned item -->

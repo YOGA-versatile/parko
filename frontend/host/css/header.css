@@ -29,7 +29,7 @@
 }
 .icon{
     margin-top: 5%;
-    height: 80%;
+    height: 40px;
 }
 .btn-primary{
     background-color: #52ab98;
@@ -45,6 +45,7 @@
 
 
 .dropdown-menu {
+    margin-top: 2%;
     text-align: center;
     width: auto; 
     background-color: #ffffff;
