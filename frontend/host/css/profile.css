@@ -1,0 +1,31 @@
+body{
+    font-family: 'Heebo';
+}
+.jumbo-tron{
+    justify-content: center;
+    text-align: center;
+}
+.jumbo-tron img{
+    text-align: center;
+}
+.jumbo-tron i{
+    color: #FFD700;
+}
+.prof-monetize{
+    border-style: solid;
+    border-radius: 16px;
+    border-width: 2px;
+    border-color: #2b6777;
+}
+.comment-container{
+    border-style: solid;
+    border-color: #52ab98;
+
+}
+.comment-container .bg-1{
+    text-align: center;
+    background-color: #c8d8e4;
+}
+.comment-container .bg-2{
+    background-color: #c8d8e4;
+}
