@@ -101,19 +101,19 @@ function clearError(input) {
 
 // Function to validate login form
 function validateLoginForm() {
-  const email = document.getElementById('l.email').value;
-  const password = document.getElementById('l.password').value;
+  const email = document.getElementById('l_email').value;
+  const password = document.getElementById('l_password').value;
 
-  clearError(document.getElementById('l.email'));
-  clearError(document.getElementById('l.password'));
+  clearError(document.getElementById('l_email'));
+  clearError(document.getElementById('l_password'));
 
   if (!validateEmail(email)) {
-      showError(document.getElementById('l.email'), 'Please enter a valid email address.');
+      showError(document.getElementById('l_email'), 'Please enter a valid email address.');
       return false;
   }
 
   if (password.length < 6) {
-      showError(document.getElementById('l.password'), 'Password must be at least 6 characters long.');
+      showError(document.getElementById('l_password'), 'Password must be at least 6 characters long.');
       return false;
   }
 
@@ -122,35 +122,35 @@ function validateLoginForm() {
 
 // Function to validate signup form
 function validateSignupForm() {
-  const username = document.getElementById('s.user.name').value;
-  const email = document.getElementById('s.email').value;
-  const phone = document.getElementById('s.phone').value;
-  const password = document.getElementById('user.password').value;
+  const username = document.getElementById('s_name').value;
+  const email = document.getElementById('s_email').value;
+  const phone = document.getElementById('s_phone').value;
+  const password = document.getElementById('user_password').value;
   const confirmPassword = document.getElementById('user.retype.password').value;
 
-  clearError(document.getElementById('s.user.name'));
-  clearError(document.getElementById('s.email'));
-  clearError(document.getElementById('s.phone'));
-  clearError(document.getElementById('user.password'));
+  clearError(document.getElementById('s_name'));
+  clearError(document.getElementById('s_email'));
+  clearError(document.getElementById('s_phone'));
+  clearError(document.getElementById('user_password'));
   clearError(document.getElementById('user.retype.password'));
 
   if (username.length < 6) {
-      showError(document.getElementById('s.user.name'), 'Username must be at least 6 characters long.');
+      showError(document.getElementById('s_name'), 'Username must be at least 6 characters long.');
       return false;
   }
 
   if (!validateEmail(email)) {
-      showError(document.getElementById('s.email'), 'Please enter a valid email address.');
+      showError(document.getElementById('s_email'), 'Please enter a valid email address.');
       return false;
   }
 
   if (!validatePhoneNumber(phone)) {
-      showError(document.getElementById('s.phone'), 'Please enter a 10-digit phone number.');
+      showError(document.getElementById('s_phone'), 'Please enter a 10-digit phone number.');
       return false;
   }
 
   if (password.length < 6) {
-      showError(document.getElementById('user.password'), 'Password must be at least 6 characters long.');
+      showError(document.getElementById('user_password'), 'Password must be at least 6 characters long.');
       return false;
   }
 

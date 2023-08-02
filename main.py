@@ -79,16 +79,33 @@
 # #     return templates.TemplateResponse("/login/order.html",context={"request":request,"data":k})
 
 
-from fastapi import FastAPI, Request, Depends
+from fastapi import FastAPI,Form, Request, Depends
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from database import SessionLocal  # Assuming you have defined SessionLocal in database.py
 from fastapi.staticfiles import StaticFiles
+from datetime import datetime
+import model as model
+from fastapi.responses import RedirectResponse
 
+current_date_time=datetime.utcnow()
 app = FastAPI()
+
+# Templates for the frontend/host directory
 templates = Jinja2Templates(directory='frontend/host/templates')
 app.mount("/frontend/host", StaticFiles(directory="frontend/host"), name="host")
+
+# Templates for the frontend/adminpanel directory
+admin_templates = Jinja2Templates(directory='frontend/adminpanel/templates')
+app.mount("/frontend/adminpanel", StaticFiles(directory="frontend/adminpanel"), name="adminpanel")
+
+
+# app = FastAPI()
+# templates = Jinja2Templates(directory='frontend/host/templates')
+# app.mount("/frontend/host", StaticFiles(directory="frontend/host"), name="host")
+# templates1 = Jinja2Templates(directory='frontend/adminpanel/templates')
+# app.mount("/frontend/adminpanel", StaticFiles(directory="frontend/adminpanel"), name="adminpanel")
 
 
 def get_db():
@@ -102,4 +119,21 @@ def get_db():
 @app.get('/get_home')
 def get_booking(request: Request, db: Session = Depends(get_db)):
     return templates.TemplateResponse("index.php", context={"request": request})
+
+
+@app.get('/get_login')
+def get_booking(request: Request, db: Session = Depends(get_db)):
+    return admin_templates.TemplateResponse("auth.php", context={"request": request})
+
+
+@app.post('/post_signup')
+def create_data(request:Request,db:Session=Depends(get_db),s_name:str=Form(...),s_email:str=Form(...),s_phone:str=Form(...),user_password:str=Form(...)):
+    statuss="ACTIVE"
+    created_at = current_date_time
+    s=1
+    body=model.sign_up(id=s,name=s_name,email=s_email,phoneno=s_phone,password=user_password,status=statuss,created_at=created_at)
+    db.add(body)
+    db.commit()
+    return RedirectResponse("/get_home",status_code=303)
+
 

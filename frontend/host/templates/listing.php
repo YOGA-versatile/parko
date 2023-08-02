@@ -24,7 +24,7 @@ include "../libs/load.php";
 
 <body>
   <!-- header -->
-    <?php load_temp("header.php"); ?>
+  {% include "header.php" %}
 
     <div class="container mt-4">
     <div class="row">
@@ -79,7 +79,7 @@ include "../libs/load.php";
       </div>
     </div>
   </div>
-    <?php load_temp("footer.php"); ?>
+  {% include "footer.php" %}
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>

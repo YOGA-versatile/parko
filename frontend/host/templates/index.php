@@ -16,15 +16,15 @@ include "../libs/load.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="/frontend/host/css/header.css">
+    <link rel="stylesheet" href="/frontend/host/css/footer.css">
+    <link rel="stylesheet" href="/frontend/host/css/index.css">
   </head>
 </head>
 
 <body>
   <!-- header -->
-    <?php load_temp("header.php"); ?>
+  {% include "header.php" %}
 
     <!-- jumbotron -->
     <div class="p-5 mb-4 rounded-3 jumbo-tron-container">
@@ -179,7 +179,8 @@ include "../libs/load.php";
             </div>
         </div>
     </div>
-    <?php load_temp("footer.php"); ?>
+
+    {% include "footer.php" %}
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>

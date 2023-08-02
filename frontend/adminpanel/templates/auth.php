@@ -104,7 +104,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="adminpanel/css/auth.css" rel="stylesheet">
+    <link href="/frontend/adminpanel/css/auth.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
 </head>
@@ -140,21 +140,21 @@
                     </button>
                 </p>
                 <div class="collapse" id="collapseSignup">
-                    <form name="signup" id="signup-form" class="form-signup" action="host/templates/" method="post">
+                    <form name="signup" id="signup-form" class="form-signup" action="/post_signup" method="post">
                         <div class="form-floating">
-                            <input name="s.user.name" type="text" class="form-control" id="s.user.name" required>
+                            <input name="s_name" type="text" class="form-control" id="s_name" required>
                             <label for="s.user.name">User Name</label>
                         </div>
                         <div class="form-floating">
-                            <input name="s.email" type="email" class="form-control" id="s.email" required>
+                            <input name="s_email" type="email" class="form-control" id="s_email" required>
                             <label for="s.email">Email</label>
                         </div>
                         <div class="form-floating">
-                            <input name="s.phone" type="text" class="form-control" id="s.phone" required>
+                            <input name="s_phone" type="text" class="form-control" id="s_phone" required>
                             <label for="s.phone">Phone Number</label>
                         </div>
                         <div class="form-floating">
-                            <input name="user.password" type="password" class="form-control" id="user.password" required>
+                            <input name="user_password" type="password" class="form-control" id="user_password" required>
                             <label for="user.password">Password</label>
                         </div>
                         <div class="form-floating">
@@ -192,7 +192,7 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Custom JS -->
-    <script src="adminpanel/js/auth.js"></script>
+    <script src="/frontend/adminpanel/js/auth.js"></script>
 </body>
 </html>
 
