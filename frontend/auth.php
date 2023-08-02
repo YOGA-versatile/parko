@@ -120,7 +120,7 @@
                     </button>
                 </p>
                 <div class="collapse" id="collapseLogin">
-                    <form name="login" id="login-form" class="form-signin" action="host/" method="post">
+                    <form name="login" id="login-form" class="form-signin" action="host/templates/" method="post">
                         <div class="form-floating">
                             <input name="l.email" type="email" class="form-control" id="l.email" required>
                             <label for="l.email">Email</label>
@@ -140,7 +140,7 @@
                     </button>
                 </p>
                 <div class="collapse" id="collapseSignup">
-                    <form name="signup" id="signup-form" class="form-signup" action="host/" method="post">
+                    <form name="signup" id="signup-form" class="form-signup" action="host/templates/" method="post">
                         <div class="form-floating">
                             <input name="s.user.name" type="text" class="form-control" id="s.user.name" required>
                             <label for="s.user.name">User Name</label>
