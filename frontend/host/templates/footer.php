@@ -5,13 +5,13 @@
             </div>
             <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.php">About</i></a>
+                <a class="nav-link" href="about.php">About</i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="calender.php">Upgrades</i></a>
+                <a class="nav-link" href="#">Upgrades</i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Team</i></a>
+                <a class="nav-link" href="#">Team</i></a>
               </li>
             </ul>
         </div>
