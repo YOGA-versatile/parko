@@ -1,15 +1,11 @@
-body{
-    font-family: 'Heebo';
-}
 .custom-common-container{
     width:100%;
-    height:9%;
+    height:10%;
 }
 .custom-common-header{
     margin-top: 2%;
     width:100%;
     height:100%;
-    position: relative;
     border-style: solid;
     border-radius: 16px;
     border-color: #c8d8e4;
@@ -24,7 +20,7 @@ body{
 }
 
 .custom-common-header p{
-    margin-top: 8%;
+    margin-top: 30%;
     font-size: 28px;
     color: #52ab98;
 }
@@ -33,5 +29,45 @@ body{
 }
 .icon{
     margin-top: 5%;
-    height: 100%;
+    height: 40px;
+}
+.btn-primary{
+    background-color: #52ab98;
+    border-color: #52ab98;
+}
+.btn-primary:hover{
+    background-color: #2b6777;
+}
+.btn.active {
+    background-color: #2b6777;
+    color: #fff;
+}
+
+
+.dropdown-menu {
+    margin-top: 2%;
+    text-align: center;
+    width: auto; 
+    background-color: #ffffff;
+    border: 1px solid #ccc; 
+    border-radius: 16px; 
+    font-size: 14px;
+    left: -100px;
+}
+
+.dropdown-menu li {
+    list-style: none; 
+    padding: 5px 0; 
+}
+
+.dropdown-menu li a {
+    color: #2b6777; 
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    color: #c8d8e4; 
+    background-color: #2b6777;
+    border-radius: 5px; 
+    padding: 5px 10px; 
 }
