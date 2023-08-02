@@ -34,6 +34,60 @@ include "../libs/load.php";
         <span id="rating-count">(1307)</span>
       </div>
     </div>
+    <div class="container mt-5 prof-monetize">
+    <div class="row mt-2">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="selectMonth" class="form-label">Select Month:</label>
+          <select id="selectMonth" class="form-select">
+            <!-- Options for months will be generated dynamically -->
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="selectYear" class="form-label">Select Year:</label>
+          <select id="selectYear" class="form-select">
+            <!-- Options for years will be generated dynamically -->
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+      <h4 class="mt-3">Parkings</h4>
+        <p id="number1" class="bg-light p-2">Four-wheelers : 102</p>
+        <p id="number1" class="bg-light p-2">Two-wheelers : 737</p>
+        <p id="number1" class="bg-light p-2">Bicycle : 321</p>
+      </div>
+      <div class="col-md-6">
+      <h4 class="mt-3">Earnings</h4>
+        <p id="number2" class="bg-light p-2">Service Charge : - ₹2586</p>
+        <p id="number2" class="bg-light p-2">GST : - ₹1760.22</p>
+        <p id="number2" class="bg-light p-2">Net Earnings : ₹8018.78</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-3 prof-monetize">
+      <h3 style="text-align:center;" class="mt-1 mb-1">COMMENTS</h3>
+      <hr>
+    <div class="row row-cols-1 mb-2">
+      <div class="col-12 mb-2 mt-2">
+        <div class="container comment-container">
+          <h5 class="bg-1 mt-1">Ram</h5>
+          <p class="bg-2 p-2">Easy to park</p>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1">
+      <div class="col-12 mb-2 mt-2">
+        <div class="container comment-container">
+          <h5 class="bg-1 mt-1">Yoga</h5>
+          <p class="bg-2 p-2">Safe parking </p>
+        </div>
+      </div>
+    </div>
+  </div>
   </main>
   <?php load_temp("footer.php"); ?>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -41,3 +95,4 @@ include "../libs/load.php";
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="../js/profile.js"></script>
 </body>
+
