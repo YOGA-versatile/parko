@@ -1,0 +1,18 @@
+body{
+    font-family: 'Heebo';
+}
+.jumbo-tron-container{
+    background-color: #ffffff;
+}
+.jumbo-tron{
+    background-color: #ffffff;
+}
+.jumbo-tron p{
+    font-size: 10px;
+}
+
+.jumbo-tron .btn-primary{
+    border-color: #2b6777;
+    background-color: #2b6777;
+    font-size: 15px;
+}

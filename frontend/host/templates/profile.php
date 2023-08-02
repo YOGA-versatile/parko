@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 <?php
 include "libs/load.php";
 ?>
@@ -22,3 +25,4 @@ include "libs/load.php";
 <body>
     <?php load_temp("header.php"); ?>
 </body>
+>>>>>>> main
