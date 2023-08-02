@@ -22,7 +22,7 @@
               <ul class="dropdown-menu">
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="listing.php">Listing</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about.php">About</a></li>
               </ul>
             </li>
           </ul>

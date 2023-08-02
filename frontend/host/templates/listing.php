@@ -20,7 +20,7 @@ include "../libs/load.php";
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/listing.css">
   </head>
-</head>
+
 
 <body>
   <!-- header -->
