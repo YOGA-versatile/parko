@@ -1,0 +1,13 @@
+body{
+    font-family: 'Heebo';
+}
+.jumbo-tron{
+    justify-content: center;
+    text-align: center;
+}
+.jumbo-tron img{
+    text-align: center;
+}
+.jumbo-tron i{
+    color: #FFD700;
+}
