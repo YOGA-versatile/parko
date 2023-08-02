@@ -16,7 +16,8 @@
     </ul>
     <ul class="nav ms-auto align-items-right">
       <li class="nav-item">
-        <p class="nav-link" href="profile.php"><i class="bi bi-person-lines-fill"></i></p>
+        <p class="nav-link" type="button" data-bs-content="profil" href="profile.php"><i class="bi bi-person-lines-fill"></i></p>
+        
       </li>
     </ul>
   </nav>

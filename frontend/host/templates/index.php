@@ -16,12 +16,12 @@ include "libs/load.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="/frontend/host/css/header.css">
+    <link rel="stylesheet" href="/frontend/host/css/footer.css">
   </head>
 </head>
 
 <body>
-    <?php load_temp("header.php"); ?>
-    <?php load_temp("footer.php"); ?>
+    {% include "header.php" %}
+    {% include "footer.php" %}
 </body>
