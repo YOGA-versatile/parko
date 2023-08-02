@@ -77,10 +77,15 @@ include "../libs/load.php";
               <label for="mapLocation" class="form-label">Location</label>
               <input type="text" class="form-control" id="mapLocation" readonly>
               <div class="container map-container mt-2">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Iste aperiam, voluptatem sequi alias earum dignissimos libero 
-                quibusdam tempora autem adipisci perferendis provident fuga 
-                exercitationem tempore quas temporibus accusamus vitae voluptate!
+                <!--...... new add for map...... -->
+                <div id="map" style="height:10vh"></div>
+                <div id="coordinates-container">Coordinates: </div>
+                
+                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+                <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+                <!-- External file  -->
+                <script src="parko\frontend\host\js\map.js"></script>
               </div>
             </div>
             <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
@@ -96,8 +101,8 @@ include "../libs/load.php";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-      var yourVariable = "Hello, this is a fixed input!";
-      var fixedInput = document.getElementById("mapLocation");
+//      var yourVariable = "Hello, this is a fixed input!";
+  //    var fixedInput = document.getElementById("mapLocation");
       fixedInput.value = yourVariable;
       document.getElementById("addCardBtn").addEventListener("click", function () {
       // Empty the form fields when the modal is shown
