@@ -29,8 +29,8 @@
                 <li><a href="help.php"><i class="bi bi-headset"></i> HelpCenter</a></li>
                 <li><a href="about.php"><i class="bi bi-info-circle"></i> About</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a href="#">Switch to guest</a></li>
-                <li><a href="#"></i>Logout</a></li>
+                <li><a href="#" class="tog">Switch - Guest</a></li>
+                <li><a href="#" class="tog"></i>Logout</a></li>
               </ul>
             </li>
           </ul>
