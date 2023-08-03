@@ -33,7 +33,7 @@ include "../libs/load.php";
     <div class="container mt-4">
     <div class="row">
       <div class="col">
-        <button id="addCardBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inputModal">SPACE +</button>
+        <a id="addCardBtn" class="btn btn-primary" href="map.php" target="_blank" >SPACE +</a>
       </div>
     </div>
     <div class="row mt-4" id="cardsContainer">
@@ -51,50 +51,7 @@ include "../libs/load.php";
     </div>
   </div>
 
-  <!-- Modal for input form -->
-  <div class="modal fade " id="inputModal" tabindex="-1" aria-labelledby="inputModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="inputModalLabel">New Space</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form onsubmit="return onSubmitForm(this);">
-            <div class="mb-2">
-              <label for="spaceName" class="form-label">Name of your space</label>
-              <input type="text" class="form-control" id="spaceName" required>
-            </div>
-            <div class="mb-2">
-              <label for="spaceSize" class="form-label">Space Size in Sq meter</label>
-              <input type="number" class="form-control" min="1" id="spaceSize" required>
-            </div>
-            <div class="mb-2">
-              <label for="spaceAddress" class="form-label">Address</label>
-              <input type="text" class="form-control" id="spaceAddress" required>
-            </div>
-            <div class="mb-2">
-              <label for="spacePincode" class="form-label">Pin Code</label>
-              <input type="number" class="form-control" min="100000" max="999999" id="spacePincode" required>
-            </div>
 
-
-            <div class="mb-2">
-              <label for="mapLocation" class="form-label">Location</label>
-              <input type="text" class="form-control mb-2" id="mapLocation" readonly>
-              <a type="button" class="btn btn-secondary mb-2" href="map.php">Get Location</a>
-            </div>
-
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" >Submit</button>
-          </form>
-        </div>
-
-
-
-
-      </div>
-    </div>
-  </div>
 
     <?php load_temp("footer.php"); ?>
     <!-- Add the Bootstrap JS and jQuery scripts -->
