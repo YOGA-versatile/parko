@@ -1,0 +1,16 @@
+body{
+    font-family: 'Heebo';
+}
+.notification-container {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  .notification {
+    padding: 10px;
+    border: 1px solid #f00000;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+  }
+  .old-notification {
+    background-color: #ddd;
+  }
