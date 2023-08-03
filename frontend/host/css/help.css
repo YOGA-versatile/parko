@@ -1,0 +1,31 @@
+body{
+    font-family: 'Heebo';
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-yet{
+    width: 80%;
+    height: 80%;
+    margin: 50px auto;
+    margin-bottom: 20%;
+    background-color: #f1f1f1;
+    color: #52ab98;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
