@@ -33,7 +33,7 @@ include "../libs/load.php";
     <div class="container mt-4">
     <div class="row">
       <div class="col">
-        <a id="addCardBtn" class="btn btn-primary" href="map.php" target="_blank" >SPACE +</a>
+        <a id="addCardBtn" class="btn btn-primary" href="map.php" target="_blank">SPACE +</a>
       </div>
     </div>
     <div class="row mt-4" id="cardsContainer">
@@ -51,8 +51,6 @@ include "../libs/load.php";
     </div>
   </div>
 
-
-
     <?php load_temp("footer.php"); ?>
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="../js/listing.js"></script>
@@ -60,6 +58,27 @@ include "../libs/load.php";
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var selectedLocation = getParameterByName('selectedLocation');
+            if (selectedLocation) {
+                var mapLocationInput = document.getElementById('mapLocation');
+                mapLocationInput.value = selectedLocation;
+            }
+        });
+
+        // Function to extract query parameters from the URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            var results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    </script>
+</body>
+
 
 </body>
