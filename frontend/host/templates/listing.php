@@ -75,20 +75,34 @@ include "../libs/load.php";
               <label for="spacePincode" class="form-label">Pin Code</label>
               <input type="number" class="form-control" min="100000" max="999999" id="spacePincode" required>
             </div>
+
+
             <div class="mb-2">
               <label for="mapLocation" class="form-label">Location</label>
-              <input type="text" class="form-control" id="mapLocation" readonly>
-              <div class="container map-container mt-2">
-                <!--...... new add for map...... -->
-                <div id="map" style="height:50vh"></div>
-                <div id="coordinates-container">Coordinates: </div>
-                
-                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-                <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-                <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-                <!-- External file  -->
-                <script src="../js/map.js"></script>
+              <input type="text" class="form-control mb-2" id="mapLocation" readonly>
+              <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#mapModal">Get Location</button>
+
+              <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-fullscreen">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="mapModalLabel">Payment</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <!-- <div id="map" style="height:50vh"></div>
+                        <div id="coordinates-container">Coordinates: </div> -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat assumenda, neque possimus aliquid tempora, quisquam tenetur, laudantium deserunt minus ex reiciendis dolores aperiam commodi eos? Ipsam hic aut distinctio placeat!
+                      </div>
+                      <div class="modal-footer">
+                          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                      </div>
+                      </div>
+                  </div>
               </div>
+
+
             </div>
             <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
           </form>
@@ -98,60 +112,11 @@ include "../libs/load.php";
   </div>
     <?php load_temp("footer.php"); ?>
     <!-- Add the Bootstrap JS and jQuery scripts -->
+    <script src="../js/listing.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script>
-//      var yourVariable = "Hello, this is a fixed input!";
-  //    var fixedInput = document.getElementById("mapLocation");
-      fixedInput.value = yourVariable;
-      document.getElementById("addCardBtn").addEventListener("click", function () {
-      // Empty the form fields when the modal is shown
-      document.getElementById("inputModal").addEventListener("show.bs.modal", function () {
-        document.getElementById("spaceName").value = "";
-        document.getElementById("spaceSize").value = "";
-      });
-
-      // Remove the modal backdrop after the modal is hidden
-      document.getElementById("inputModal").addEventListener("hidden.bs.modal", function () {
-        const modalBackdrop = document.querySelector(".modal-backdrop");
-        if (modalBackdrop) {
-          modalBackdrop.remove();
-        }
-      });
-    });
-
-    // Function to handle form submission
-    function onSubmitForm(form) {
-      const name = form.querySelector("#spaceName").value;
-      const size = form.querySelector("#spaceSize").value;
-      const detailsSummary = document.getElementById("detailsSummary");
-      const detailsCard = document.createElement("div");
-      detailsCard.classList.add("card", "mt-2");
-      detailsCard.innerHTML = `
-        <div class="card-body">
-          <h5 class="card-title">${name}</h5>
-          <p class="card-text">${size}</p>
-        </div>
-      `;
-      detailsSummary.appendChild(detailsCard);
-      // Close the modal after form submission
-      const inputModal = bootstrap.Modal.getInstance(document.getElementById("inputModal"));
-      inputModal.hide();
-      form.reset(); // Reset the form fields after submission
-      return false; // Prevent form submission
-    }
-        $(document).ready(function() {
-            // Handle button clicks to show the corresponding content
-            $('.btn').on('click', function() {
-                var targetContent = $(this).data('target');
-                $('.content').hide();
-                $('#' + targetContent).show();
-                $('.btn').removeClass('active');
-                $(this).addClass('active');
-            });
-        });
-    </script>
+    
 
 </body>
