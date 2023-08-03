@@ -13,16 +13,24 @@
                 <a class="nav-link" href="manage.php">Calender</i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="inbox.php">Inbox</i></a>
+                <a class="nav-link" href="listing.php">Listing</i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profile.php">Profile</i></a>
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <p class="bi bi-person-lines-fill" data-toggle="dropdown"></p>
+              <p class="bi bi-list" data-toggle="dropdown"></p>
               <ul class="dropdown-menu">
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="listing.php">Listing</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="account.php"><i class="bi bi-person"></i> Account</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="notification.php"><i class="bi bi-bell"></i> Notification</a></li>
+                <li><a href="help.php"><i class="bi bi-headset"></i> HelpCenter</a></li>
+                <li><a href="about.php"><i class="bi bi-info-circle"></i> About</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="#" class="tog">Switch - Guest</a></li>
+                <li><a href="#" class="tog"></i>Logout</a></li>
               </ul>
             </li>
           </ul>

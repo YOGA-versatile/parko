@@ -1,0 +1,28 @@
+body{
+    font-family: 'Heebo';
+    height :  100%;
+}
+
+.custom-container{
+    border-style: solid;
+    border-color: #2b6777;
+    border-radius: 16px;
+    margin-top: 5%;
+    width: 80%;
+}
+
+.custom-form{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+/* .container-map{
+    
+} */
+
+#map{
+    height: 50vh;
+    border-style: solid;
+    border-color: black;
+}

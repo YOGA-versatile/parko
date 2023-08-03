@@ -1,0 +1,18 @@
+body{
+    font-family: 'Heebo';
+}
+.map-container{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+#fixedInput {
+    position: fixed;
+    top: 50px; /* Adjust the top position as needed */
+    left: 50px; /* Adjust the left position as needed */
+}
+
+#map {
+    height: 300px;
+  }

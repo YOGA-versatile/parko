@@ -1,46 +1,32 @@
-<!DOCTYPE html>
-<html>
+<?php
+include "../libs/load.php";
+?>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <script src="../vendor/assets/js/color-modes.js"></script>
 
-<head>
-  <link rel="stylesheet" href="css/manage.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.112.5">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="../vendor/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+    <script src="../vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/index.css">
+  </head>
 
 <body>
-  <div class='calendar'>
-    <div class='calendar_left'>
-      <div class='header'>
-        <i class='material-icons' id="prev-btn">navigate_before</i>
-        <h1 id="month-name">Month</h1>
-        <i class='material-icons' id="next-btn">navigate_next</i>
-      </div>
-      <div class='days'>
-        <div class='day_item'>Mon</div>
-        <div class='day_item'>Tue</div>
-        <div class='day_item'>Wed</div>
-        <div class='day_item'>Thu</div>
-        <div class='day_item'>Fri</div>
-        <div class='day_item'>Sat</div>
-        <div class='day_item'>Sun</div>
-      </div>
-      <div class='dates'></div>
-    </div>
-    <div class='calendar_right'>
-      <div class='list'>
-        <ul id="event-list">
-        </ul>
-      </div>
-      <form id="add-event-form">
-        <input id="event-description" placeholder='Enter a task for this day' type='text'>
-        <select id="event-type" placeholder='Type'>
-          <option value='Social'>Social</option>
-          <option value='Work'>Work</option>
-        </select>
-      </form>
-    </div>
-  </div>
-
-  <script src="js/manage.js"></script>
+  <!-- header -->
+    <?php load_temp("header.php"); ?>
+    <?php load_temp("footer.php"); ?>
+    <!-- Add the Bootstrap JS and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
-</html>

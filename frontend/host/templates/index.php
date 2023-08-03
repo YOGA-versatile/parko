@@ -20,7 +20,6 @@ include "../libs/load.php";
     <link rel="stylesheet" href="/frontend/host/css/footer.css">
     <link rel="stylesheet" href="/frontend/host/css/index.css">
   </head>
-</head>
 
 <body>
   <!-- header -->

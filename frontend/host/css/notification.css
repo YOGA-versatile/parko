@@ -1,0 +1,43 @@
+body{
+    font-family: 'Heebo';
+}
+
+
+.notification-container {
+  margin: 20px auto;
+}
+.notification-container h2{
+  color: #2b6777;
+  text-align: center;
+}
+
+.notification {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  background-color: #c8d8e4;
+  cursor: pointer;
+}
+
+.notification-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expanded .notification-content {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+.close-btn {
+  margin-top: 5px;
+}
+
+.notification-box{
+  max-width: 80%;
+  border-radius: 16px;
+  border-style: solid;
+  border-color: #4DB4D7;
+}

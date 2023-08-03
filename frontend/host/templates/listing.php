@@ -14,13 +14,17 @@ include "../libs/load.php";
     <link href="../vendor/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/listing.css"><link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+
+
   </head>
-</head>
+
 
 <body>
   <!-- header -->
@@ -29,7 +33,7 @@ include "../libs/load.php";
     <div class="container mt-4">
     <div class="row">
       <div class="col">
-        <button id="addCardBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inputModal">SPACE +</button>
+        <a id="addCardBtn" class="btn btn-primary" href="map.php" target="_blank">SPACE +</a>
       </div>
     </div>
     <div class="row mt-4" id="cardsContainer">
@@ -81,57 +85,32 @@ include "../libs/load.php";
   </div>
   {% include "footer.php" %}
     <!-- Add the Bootstrap JS and jQuery scripts -->
+    <script src="../js/listing.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-      document.getElementById("addCardBtn").addEventListener("click", function () {
-      // Empty the form fields when the modal is shown
-      document.getElementById("inputModal").addEventListener("show.bs.modal", function () {
-        document.getElementById("spaceName").value = "";
-        document.getElementById("spaceSize").value = "";
-      });
-
-      // Remove the modal backdrop after the modal is hidden
-      document.getElementById("inputModal").addEventListener("hidden.bs.modal", function () {
-        const modalBackdrop = document.querySelector(".modal-backdrop");
-        if (modalBackdrop) {
-          modalBackdrop.remove();
-        }
-      });
-    });
-
-    // Function to handle form submission
-    function onSubmitForm(form) {
-      const name = form.querySelector("#spaceName").value;
-      const size = form.querySelector("#spaceSize").value;
-      const detailsSummary = document.getElementById("detailsSummary");
-      const detailsCard = document.createElement("div");
-      detailsCard.classList.add("card", "mt-2");
-      detailsCard.innerHTML = `
-        <div class="card-body">
-          <h5 class="card-title">${name}</h5>
-          <p class="card-text">${size}</p>
-        </div>
-      `;
-      detailsSummary.appendChild(detailsCard);
-      // Close the modal after form submission
-      const inputModal = bootstrap.Modal.getInstance(document.getElementById("inputModal"));
-      inputModal.hide();
-      form.reset(); // Reset the form fields after submission
-      return false; // Prevent form submission
-    }
-        $(document).ready(function() {
-            // Handle button clicks to show the corresponding content
-            $('.btn').on('click', function() {
-                var targetContent = $(this).data('target');
-                $('.content').hide();
-                $('#' + targetContent).show();
-                $('.btn').removeClass('active');
-                $(this).addClass('active');
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            var selectedLocation = getParameterByName('selectedLocation');
+            if (selectedLocation) {
+                var mapLocationInput = document.getElementById('mapLocation');
+                mapLocationInput.value = selectedLocation;
+            }
         });
+
+        // Function to extract query parameters from the URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            var results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
     </script>
+</body>
+
 
 </body>
