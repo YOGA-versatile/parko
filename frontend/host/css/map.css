@@ -8,7 +8,11 @@ body{
     border-color: #2b6777;
     border-radius: 16px;
     margin-top: 5%;
+    margin-bottom: 5%;
     width: 80%;
+}
+.custom-container #submit{
+    text-align: center;
 }
 
 .custom-form{
@@ -25,4 +29,47 @@ body{
     height: 50vh;
     border-style: solid;
     border-color: black;
+}
+
+/* Custom CSS to override Bootstrap dropdown styles */
+.form-check{
+    width: 35%;
+}
+
+.custom-dropdown{
+    width: 40%;
+
+}
+
+.custom-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+}
+
+.custom-dropdown .btn-secondary {
+    width: 100%;
+    text-align: left;
+}
+
+/* Expand main container when dropdown expands */
+.custom-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    min-width: 100%;
+}
+.custom-dropdown label{
+    width: max-content;
+}
+
+.btn-primary{
+    color: white;
+    background-color: #52ab98;
+    border-color: #52ab98;
+}
+.btn-primary:hover{color: white;
+    background-color: #2b6777;
+    border-color: #2b6777;
+
 }
