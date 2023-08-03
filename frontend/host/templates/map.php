@@ -14,13 +14,15 @@ include "../libs/load.php";
     <link href="../vendor/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/map.css">
+    </script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>MapHost</title>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6.5.0"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="../js/map.js"></script>
 
 
 
@@ -49,12 +51,9 @@ include "../libs/load.php";
         <div class="mb-2">
             <label for="mapLocation" class="form-label">Location</label>
             <div class="container-map">
-                <div id="map" ></div>
-                <!-- <div id="coordinates-container">Coordinates: </div> -->
+                <div id="map" style="height:50vh"></div>
+                <div id="coordinates-container">Coordinates: </div>
                 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-                <script src="../js/map.js"></script>
-                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-                <script src="https://unpkg.com/@turf/turf@6.5.0"></script>
             </div>
             <input type="text" class="form-control mb-2 mt-2" id="coordinates-container" readonly>
         </div>
@@ -68,6 +67,52 @@ include "../libs/load.php";
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    var map = L.map('map').setView([9.939093, 78.121719], 10);
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var x = position.coords.latitude;
+            var y = position.coords.longitude;
+            map.setView([x, y], 10);
+            var userMarker = L.marker([x, y], { draggable: true }).addTo(map).bindPopup("Your Location");
+            var userCoordinates = { lat: x, lng: y };
+            var flag=0;
+            var geocoder = L.Control.geocoder({
+                defaultMarkGeocode: false
+            }).on('markgeocode', function(e) {
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.Marker) {
+                        map.removeLayer(layer);
+                    }
+                });
+                var marker = L.marker(e.geocode.center, { draggable: true }).addTo(map);
+                marker.bindPopup(e.geocode.name).openPopup();
+                map.setView(e.geocode.center, 13);
+                function updateCoordinates() {
+                    var coordinatesContainer = document.getElementById('coordinates-container');
+                    coordinatesContainer.textContent = marker.getLatLng().lat + ', ' + marker.getLatLng().lng;
+                    if(flag==0){
+                        coordinatesContainer.textContent = userMarker.getLatLng().lat + ', ' + userMarker.getLatLng().lng;
+                    }
+                }marker.on('move', function(e) {
+                    flag=1;
+                    if(flag==1){
+                        updateCoordinates();
+                    }
+                });
+                updateCoordinates();
+            }).addTo(map);
 
+        },function(error) {
+            console.error("Error getting user's location:", error.message);
+        });
+    } else {
+      console.error("Geolocation is not supported in this browser.");
+    }var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    });
+    googleStreets.addTo(map);
+</script>
 
 </body>
