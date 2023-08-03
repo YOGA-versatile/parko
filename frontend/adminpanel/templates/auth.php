@@ -120,18 +120,21 @@
                     </button>
                 </p>
                 <div class="collapse" id="collapseLogin">
-                    <form name="login" id="login-form" class="form-signin" action="host/templates/" method="post">
+                    <form name="login" id="login-form" class="form-signin" action="/post_login" method="post">
                         <div class="form-floating">
-                            <input name="l.email" type="email" class="form-control" id="l.email" required>
+                            <input name="l_email" type="email" class="form-control" id="l_email" required>
                             <label for="l.email">Email</label>
                         </div>
                         <div class="form-floating">
-                            <input name="l.password" type="password" class="form-control" id="l.password" required>
+                            <input name="l_password" type="password" class="form-control" id="l_password" required>
                             <label for="l.password">Password</label>
                         </div>
-                        <button class="btn btn-bd-primary btn-auth w-100 py-2" type="submit">Login</button>
+                        <button class="btn btn-bd-primary btn-auth w-100 py-2" type="submit" onclick="check_user('Add')">Login</button>
                     </form>
                 </div>
+              <!--  {% if message %}
+                <p style="color: red;">{{ message }}</p>
+                {% endif %} -->
 
                 <!-- Signup Form -->
                 <p>
@@ -140,28 +143,28 @@
                     </button>
                 </p>
                 <div class="collapse" id="collapseSignup">
-                    <form name="signup" id="signup-form" class="form-signup" action="/post_signup" method="post">
+                    <form name="signup" id="signup-form" class="form-signup">
                         <div class="form-floating">
-                            <input name="s_name" type="text" class="form-control" id="s_name" required>
+                            <input name="name" type="text" class="form-control" id="name" required>
                             <label for="s.user.name">User Name</label>
                         </div>
                         <div class="form-floating">
-                            <input name="s_email" type="email" class="form-control" id="s_email" required>
+                            <input name="email" type="email" class="form-control" id="email" required>
                             <label for="s.email">Email</label>
                         </div>
                         <div class="form-floating">
-                            <input name="s_phone" type="text" class="form-control" id="s_phone" required>
+                            <input name="phone" type="text" class="form-control" id="phone" required>
                             <label for="s.phone">Phone Number</label>
                         </div>
                         <div class="form-floating">
-                            <input name="user_password" type="password" class="form-control" id="user_password" required>
+                            <input name="password" type="password" class="form-control" id="password" required>
                             <label for="user.password">Password</label>
                         </div>
                         <div class="form-floating">
                             <input name="user.retype.password" type="password" class="form-control" id="user.retype.password" required>
                             <label for="user.retype.password">Confirm Password</label>
                         </div>
-                        <button class="btn btn-bd-primary btn-auth w-100 py-2" type="submit">Sign up</button>
+                        <button class="btn btn-bd-primary btn-auth w-100 py-2" type="submit" onclick="add_user('Add')">Sign up</button>
                     </form>
                 </div>
             </div>

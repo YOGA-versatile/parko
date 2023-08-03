@@ -80,7 +80,7 @@
 
 
 from fastapi import FastAPI,Form, Request, Depends
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from database import SessionLocal  # Assuming you have defined SessionLocal in database.py
@@ -88,6 +88,8 @@ from fastapi.staticfiles import StaticFiles
 from datetime import datetime
 import model as model
 from fastapi.responses import RedirectResponse
+from fastapi import FastAPI, Depends
+from fastapi.encoders import jsonable_encoder
 
 current_date_time=datetime.utcnow()
 app = FastAPI()
@@ -125,15 +127,37 @@ def get_booking(request: Request, db: Session = Depends(get_db)):
 def get_booking(request: Request, db: Session = Depends(get_db)):
     return admin_templates.TemplateResponse("auth.php", context={"request": request})
 
-
 @app.post('/post_signup')
-def create_data(request:Request,db:Session=Depends(get_db),s_name:str=Form(...),s_email:str=Form(...),s_phone:str=Form(...),user_password:str=Form(...)):
+def create_data(request:Request,db:Session=Depends(get_db),name:str=Form(...),email:str=Form(...),phoneno:str=Form(...),password:str=Form(...)):
     statuss="ACTIVE"
     created_at = current_date_time
-    s=1
-    body=model.sign_up(id=s,name=s_name,email=s_email,phoneno=s_phone,password=user_password,status=statuss,created_at=created_at)
-    db.add(body)
-    db.commit()
-    return RedirectResponse("/get_home",status_code=303)
+    # body=model.sign_up(name=s_name,email=s_email,phoneno=s_phone,password=user_password,status=statuss,created_at=created_at)
+    find=db.query(model.sign_up).filter(model.sign_up.email==email,model.sign_up.status =="ACTIVE").first()
+    if find is None:
+            body=model.sign_up(name=name,email=email,phoneno=phoneno,password=password,status=statuss,created_at=created_at)
+            db.add(body)
+            db.commit()
+            error = "Done"
+            json_compatible_item_data = jsonable_encoder(error)
+            return JSONResponse(content=json_compatible_item_data)
+    else:
+            error = "Already this name Exist"
+            json_compatible_item_data = jsonable_encoder(error)
+            return JSONResponse(content=json_compatible_item_data)
+
+
+@app.post('/post_login')
+def create_data(request: Request, db: Session = Depends(get_db), l_email: str = Form(...), l_password: str = Form(...)):
+    user = db.query(model.sign_up).filter(model.sign_up.email == l_email, model.sign_up.password == l_password ,model.sign_up.status =="ACTIVE").first()
+    
+    if user is None:
+            error = "Not in database"
+            json_compatible_item_data = jsonable_encoder(error)
+            return JSONResponse(content=json_compatible_item_data)
+    else:
+            error = "Done"
+            json_compatible_item_data = jsonable_encoder(error)
+            return JSONResponse(content=json_compatible_item_data)
+
 
 

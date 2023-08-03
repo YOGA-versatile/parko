@@ -5,7 +5,7 @@ from database import base,db_engine
 class sign_up(base):
     __tablename__ = "signup"
     
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True,index=True)
     name = Column(String(30))
     email = Column(String(30))
     phoneno = Column(String(30))
