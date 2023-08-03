@@ -28,7 +28,7 @@ include "../libs/load.php";
 
 <body>
   <!-- header -->
-    <?php load_temp("header.php"); ?>
+  {% include "header.php" %}
 
     <div class="container mt-4">
     <div class="row">
@@ -51,7 +51,39 @@ include "../libs/load.php";
     </div>
   </div>
 
-    <?php load_temp("footer.php"); ?>
+  <!-- Modal for input form -->
+  <div class="modal fade " id="inputModal" tabindex="-1" aria-labelledby="inputModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inputModalLabel">New Space</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="return onSubmitForm(this);">
+            <div class="mb-2">
+              <label for="spaceName" class="form-label">Name of your space</label>
+              <input type="text" class="form-control" id="spaceName" required>
+            </div>
+            <div class="mb-2">
+              <label for="spaceSize" class="form-label">Space Size in Sq meter</label>
+              <input type="number" class="form-control" min="1" id="spaceSize" required>
+            </div>
+            <div class="mb-2">
+              <label for="spaceAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="spaceAddress" required>
+            </div>
+            <div class="mb-2">
+              <label for="spacePincode" class="form-label">Pin Code</label>
+              <input type="number" class="form-control" min="100000" max="999999" id="spacePincode" required>
+            </div>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "footer.php" %}
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="../js/listing.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
