@@ -22,6 +22,10 @@ include "../libs/load.php";
 </head>
 <body>
 <?php load_temp("header.php"); ?>
+<div class="container-yet">
+    <h1>Yet to be Implemented</h1>
+    <p>This page is under construction or yet to be implemented. Please check back later.</p>
+    </div>
 <?php load_temp("footer.php"); ?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>

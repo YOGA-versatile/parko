@@ -1,27 +1,46 @@
-// Function to add a new notification to the list
-function addNotification(message, isNew) {
-    const notificationList = document.getElementById('notification-list');
+document.addEventListener("DOMContentLoaded", function() {
+function createNotificationElement(message) {
+    const notificationElement = document.createElement("div");
+    notificationElement.classList.add("notification");
+    const contentElement = document.createElement("p");
+    contentElement.textContent = message;
+    contentElement.classList.add("notification-content");
+    notificationElement.appendChild(contentElement);
 
-    // Create the notification element
-    const notification = document.createElement('div');
-    notification.classList.add('notification', isNew ? '' : 'old-notification');
-    notification.innerHTML = `
-        <p>${message}</p>
-        <button class="btn btn-danger btn-sm delete-btn">Delete</button>
-    `;
-
-    // Add event listener to the delete button
-    const deleteBtn = notification.querySelector('.delete-btn');
-    deleteBtn.addEventListener('click', function() {
-        notification.remove();
+    notificationElement.addEventListener("click", function() {
+    if (!notificationElement.classList.contains("expanded")) {
+        notificationElement.classList.add("expanded");
+        notificationElement.appendChild(closeBtn);
+    }
     });
 
-    // Add the notification to the list
-    notificationList.prepend(notification);
+    return notificationElement;
+}
+
+function addNotification(message) {
+    const notificationList = document.getElementById("notification-list");
+    const notificationElement = createNotificationElement(message);
+    notificationList.prepend(notificationElement);
 }
 
 // Sample notifications
-addNotification("This is a new notification", true);
-addNotification("This is an old notification", false);
-addNotification("Another new notification", true);
-alert(hi);
+addNotification("This is a new notification. Click to see the full message.");
+addNotification("This is an new notification. Click to see the full message.");
+addNotification("Another new notification. Click to see the full message.");
+addNotification("This is a new notification. Click to see the full message.");
+addNotification("This is an new notification. Click to see the full message.");
+addNotification("Another new notification. Click to see the full message.");
+addNotification("This is a new notification. Click to see the full message.");
+addNotification("This is an new notification. Click to see the full message.");
+addNotification("Another new notification. Click to see the full message.");
+
+const closeBtn = document.createElement("button");
+closeBtn.classList.add("btn", "btn-danger", "btn-sm", "close-btn");
+closeBtn.textContent = "Close";
+closeBtn.addEventListener("click", function(event) {
+    event.stopPropagation();
+    const notificationElement = event.target.closest(".notification");
+    notificationElement.classList.remove("expanded");
+    closeBtn.remove();
+});
+});

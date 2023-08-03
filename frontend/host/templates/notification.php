@@ -5,7 +5,11 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 <head>
-    <!-- ... Your other meta tags and CSS links ... -->
+    <script src="../vendor/assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.112.5">
 
     <!-- Bootstrap CSS -->
     <link href="../vendor/assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,41 +23,14 @@
 </head>
 <body>
     <?php load_temp("header.php"); ?>
-
-    <div class="container notification-container">
-        <h2>Notifications</h2>
-        <div id="notification-list"></div>
+    <div class="container notification-box">
+        <div class="container notification-container">
+            <h2>Notifications</h2>
+            <div id="notification-list"></div>
+        </div>
     </div>
 
     <?php load_temp("footer.php"); ?>
-    <script>
-        function addNotification(message, isNew) {
-            const notificationList = document.getElementById('notification-list');
-
-            // Create the notification element
-            const notification = document.createElement('div');
-            notification.classList.add('notification', isNew ? '' : 'old-notification');
-            notification.innerHTML = `
-                <p>${message}</p>
-                <button class="btn btn-danger btn-sm delete-btn">Delete</button>
-            `;
-
-            // Add event listener to the delete button
-            const deleteBtn = notification.querySelector('.delete-btn');
-            deleteBtn.addEventListener('click', function() {
-                notification.remove();
-            });
-
-            // Add the notification to the list
-            notificationList.prepend(notification);
-        }
-
-        // Sample notifications
-        addNotification("This is a new notification", true);
-        addNotification("This is an old notification", false);
-        addNotification("Another new notification", true);
-        alert("hi");
-    </script>
 
     <!-- Your custom notification.js file -->
     <script src="../js/notification.js"></script>
