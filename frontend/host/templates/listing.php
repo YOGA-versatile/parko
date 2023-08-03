@@ -20,7 +20,10 @@ include "../libs/load.php";
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/listing.css">
+    <link rel="stylesheet" href="../css/listing.css"><link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+
+
   </head>
 
 
@@ -81,38 +84,55 @@ include "../libs/load.php";
               <label for="mapLocation" class="form-label">Location</label>
               <input type="text" class="form-control mb-2" id="mapLocation" readonly>
               <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#mapModal">Get Location</button>
-
-              <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-fullscreen">
-                      <div class="modal-content">
-                      <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="mapModalLabel">Payment</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <!-- <div id="map" style="height:50vh"></div>
-                        <div id="coordinates-container">Coordinates: </div> -->
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat assumenda, neque possimus aliquid tempora, quisquam tenetur, laudantium deserunt minus ex reiciendis dolores aperiam commodi eos? Ipsam hic aut distinctio placeat!
-                      </div>
-                      <div class="modal-footer">
-                          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-                          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                      </div>
-                      </div>
-                  </div>
-              </div>
-
-
             </div>
+
             <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
           </form>
         </div>
+
+
+
+
       </div>
     </div>
   </div>
+
+<div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="mapModalLabel">LOCATION</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container map-container mt-2">
+                  <!--...... new add for map...... -->
+                  <div id="map" style="height:50vh"></div>
+                  <div id="coordinates-container">Coordinates: </div>
+                  
+                  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+                  <!-- External file  -->
+                  <script src="../js/map.js"></script>
+          </div>
+          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat assumenda, neque possimus aliquid tempora, quisquam tenetur, laudantium deserunt minus ex reiciendis dolores aperiam commodi eos? Ipsam hic aut distinctio placeat! -->
+        </div>
+        <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+        </div>
+    </div>
+</div>
+
+
     <?php load_temp("footer.php"); ?>
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="../js/listing.js"></script>
+    <script src="../js/map.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
