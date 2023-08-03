@@ -1,0 +1,25 @@
+body{
+    font-family: 'Heebo';
+}
+.custom-common-footer{
+    position: relative;
+    right : 0 ;
+    left: 0;
+    bottom: 5;
+    width: 100%;
+}
+.custom-footer{
+    margin-top: 2%;
+    width:100%;
+    height:100%;
+    position: relative;
+    border-style: solid;
+    border-top-color:#2b6777;
+    border-bottom-color:#ffffff ;
+    border-left-color:#ffffff ;
+    border-right-color:#ffffff ;
+    border-width: 1px;
+}
+.custom-footer a{
+    font-size: 15px;
+}
