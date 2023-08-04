@@ -101,19 +101,19 @@ function clearError(input) {
 
 // Function to validate login form
 function validateLoginForm() {
-  const email = document.getElementById('l.email').value;
-  const password = document.getElementById('l.password').value;
+  const email = document.getElementById('l_email').value;
+  const password = document.getElementById('l_password').value;
 
-  clearError(document.getElementById('l.email'));
-  clearError(document.getElementById('l.password'));
+  clearError(document.getElementById('l_email'));
+  clearError(document.getElementById('l_password'));
 
   if (!validateEmail(email)) {
-      showError(document.getElementById('l.email'), 'Please enter a valid email address.');
+      showError(document.getElementById('l_email'), 'Please enter a valid email address.');
       return false;
   }
 
   if (password.length < 6) {
-      showError(document.getElementById('l.password'), 'Password must be at least 6 characters long.');
+      showError(document.getElementById('l_password'), 'Password must be at least 6 characters long.');
       return false;
   }
 
@@ -122,35 +122,35 @@ function validateLoginForm() {
 
 // Function to validate signup form
 function validateSignupForm() {
-  const username = document.getElementById('s.user.name').value;
-  const email = document.getElementById('s.email').value;
-  const phone = document.getElementById('s.phone').value;
-  const password = document.getElementById('user.password').value;
+  const username = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const password = document.getElementById('password').value;
   const confirmPassword = document.getElementById('user.retype.password').value;
 
-  clearError(document.getElementById('s.user.name'));
-  clearError(document.getElementById('s.email'));
-  clearError(document.getElementById('s.phone'));
-  clearError(document.getElementById('user.password'));
+  clearError(document.getElementById('name'));
+  clearError(document.getElementById('email'));
+  clearError(document.getElementById('phone'));
+  clearError(document.getElementById('password'));
   clearError(document.getElementById('user.retype.password'));
 
   if (username.length < 6) {
-      showError(document.getElementById('s.user.name'), 'Username must be at least 6 characters long.');
+      showError(document.getElementById('name'), 'Username must be at least 6 characters long.');
       return false;
   }
 
   if (!validateEmail(email)) {
-      showError(document.getElementById('s.email'), 'Please enter a valid email address.');
+      showError(document.getElementById('email'), 'Please enter a valid email address.');
       return false;
   }
 
   if (!validatePhoneNumber(phone)) {
-      showError(document.getElementById('s.phone'), 'Please enter a 10-digit phone number.');
+      showError(document.getElementById('phone'), 'Please enter a 10-digit phone number.');
       return false;
   }
 
   if (password.length < 6) {
-      showError(document.getElementById('user.password'), 'Password must be at least 6 characters long.');
+      showError(document.getElementById('password'), 'Password must be at least 6 characters long.');
       return false;
   }
 
@@ -174,3 +174,76 @@ document.getElementById('signup-form').addEventListener('submit', function (even
       event.preventDefault();
   }
 });
+
+function check_user(action, id) {
+  if(action="Add"){
+    // alert("*");
+  $("form").submit(function (event) {
+      
+  var formData = {
+      l_email: $("#l_email").val(),
+      l_password: $("#l_password").val(),
+     
+  };
+  console.log(formData);
+  $.ajax({
+      type: "POST",
+      url: "/post_login",
+      data: formData,
+      dataType: "json",
+      encode: true,
+  }).done(function (data1) {
+     
+          if (data1 == "Not in database"){
+              alert("Give the correct email and password");
+  }
+          if (data1 === "Done") {
+            window.location.href = "/get_home";
+          }
+          
+
+  
+  });
+
+  event.preventDefault();
+  });
+
+} 
+}
+function add_user(action, id) {
+  if(action="Add"){
+    // alert("*");
+  $("form").submit(function (event) {
+      
+  var formData = {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      phoneno: $("#phone").val(),
+      password: $("#password").val(),
+     
+  };
+  console.log(formData);
+  $.ajax({
+      type: "POST",
+      url: "/post_signup",
+      data: formData,
+      dataType: "json",
+      encode: true,
+  }).done(function (data1) {
+     
+          if (data1 == "Already this name Exist"){
+              alert("check the data");
+  }
+          if (data1 === "Done") {
+            window.location.href = "/get_home";
+          }
+          
+
+  
+  });
+
+  event.preventDefault();
+  });
+
+} 
+}
