@@ -24,9 +24,189 @@ include "../libs/load.php";
 <body>
   <!-- header -->
     <?php load_temp("header.php"); ?>
+
+    <!-- jumbotron -->
+    <!-- <div class="p-5 mb-4 rounded-3 jumbo-tron-container">
+      <div class="container-fluid py-5 jumbo-tron">
+        <h1 class="display-6 fw-bold">Hello Host</h1>
+        <p class="col-md-8 fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corporis enim, ex itaque temporibus laudantium sunt ab earum officiis eum laboriosam eius nam </p>
+        <a class="btn btn-primary btn-lg" href="listing.php">Listing</a>
+      </div>
+    </div> -->
+    <div class="container search-space">
+      <div class="input-group">
+        <div class="form-outline">
+          <input type="search" id="form1" class="form-control" />
+          <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="button" class="btn btn-primary">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- control card -->
+    <div class="container mt-4 custom-manage-card">
+        <div class="card custom-manage-card">
+            <div class="card-header">
+                <!-- Button group 1 -->
+                <!-- <div class="btn-group mr-2" role="group" id="buttonGroup1"> -->
+                    <button type="button" class="btn btn-primary active" data-target="content1">present</button>
+                    <button type="button" class="btn btn-primary" data-target="content2">upcoming</button>
+                    <button type="button" class="btn btn-primary" data-target="content3">past</button>
+                <!-- </div> -->
+
+                <!-- Button group 2 -->
+                <div class="btn-group mr-2" role="group" id="buttonGroup2">
+                    <!-- Add more buttons here if needed -->
+                </div>
+
+                <!-- Button group 3 -->
+                <div class="btn-group" role="group" id="buttonGroup3">
+                    <!-- Add more buttons here if needed -->
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="content1" class="content">
+                    <div class="custom-card d-flex g-4">
+                      <div class="row row-cols-3">
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-success" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-success" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-success" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+                <div id="content2" class="content" style="display: none;">
+                <div class="custom-card d-flex g-4">
+                      <div class="row row-cols-3">
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-info" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-info" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-info" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                <div id="content3" class="content" style="display: none;">
+                <div class="custom-card d-flex g-4">
+                      <div class="row row-cols-3">
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-secondary" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-secondary" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="card text-center mb-3 text-bg-secondary" style="width: 18rem;">
+                            <div class="card-body">
+                              <h5 class="card-title">Vehicle number</h5>
+                              <h7 class="card-text">Vehicle type</h7><br>
+                              <h7 class="card-text">Time</h7>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php load_temp("footer.php"); ?>
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Handle button clicks to show the corresponding content
+            $('.btn').on('click', function() {
+                var targetContent = $(this).data('target');
+                $('.content').hide();
+                $('#' + targetContent).show();
+                $('.btn').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+
+
 </body>

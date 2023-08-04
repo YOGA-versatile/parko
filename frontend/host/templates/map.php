@@ -61,12 +61,12 @@ include "../libs/load.php";
 
         <div class="mb-2">
             <label for="mapLocation" class="form-label">Location</label>
-            <!-- <div class="container-map">
+            <div class="container-map">
                 <div id="map" style="height:50vh"></div>
-                <div id="coordinates-container">Coordinates: </div>
+                <input type="text" class="form-control mb-2 mt-2" id="coordinates-container"readonly>
                 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-            </div> -->
-            <input type="text" class="form-control mb-2 mt-2" id="coordinates-container" value="9.5646516 8.6565165" readonly>
+            </div>
+            
         </div>
 
         <div class="mb-2">

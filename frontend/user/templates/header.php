@@ -10,10 +10,7 @@
                 <a class="nav-link" href="index.php">Home</i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="manage.php">Calender</i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="listing.php">Listing</i></a>
+                <a class="nav-link" href="booking.php">Booking</i></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="profile.php">Profile</i></a>
@@ -24,14 +21,13 @@
               <p class="bi bi-list" data-toggle="dropdown"></p>
               <ul class="dropdown-menu">
                 <li><a href="account.php"><i class="bi bi-person"></i> Account</a></li>
-                <li><a href="account.php"><i class="bi bi-person"></i> Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a href="notification.php"><i class="bi bi-bell"></i> Notification</a></li>
                 <li><a href="help.php"><i class="bi bi-headset"></i> HelpCenter</a></li>
                 <li><a href="about.php"><i class="bi bi-info-circle"></i> About</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a href="#" class="tog">Switch - Guest</a></li>
-                <li><a href="#" class="tog"></i>Logout</a></li>
+                <li><a href="../../host/templates" class="tog">Switch - Host</a></li>
+                <li><a href="../../auth.php" class="tog"></i>Logout</a></li>
               </ul>
             </li>
           </ul>

@@ -6,13 +6,13 @@
             <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="about.php">About</i></a>
-            </li>
-            <li class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="updates.php">Updates</i></a>
-            </li>
-            <li class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="developers.php">Developers</i></a>
-            </li>
+              </li>
             </ul>
         </div>
 </footer>
