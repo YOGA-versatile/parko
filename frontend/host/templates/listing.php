@@ -44,7 +44,34 @@ include "../libs/load.php";
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Details Summary</h5>
-            <div id="detailsSummary"></div>
+            <div id="detailsSummary">
+
+            <div class="card mb-2 mt-1 book-card">
+              <div class="card-header">
+                Yoga Parking
+              </div>
+              <div class="card-body">
+              <h5 class="card-title">Space Information</h5>
+                <p class="card-text">
+                    Types of User: <span id="displayUserType"></span><br>
+                    Name of Space: <span id="displayName"></span><br>
+                    Space Size: <span id="displaySize"></span> Sq meter<br>
+                    Address: <span id="displayAddress"></span><br>
+                    Pin Code: <span id="displayPincode"></span><br>
+                    Location Coordinates: <span id="displayCoordinates"></span><br>
+                    Space Length: <span id="displayLength"></span><br>
+                    Space Width: <span id="displayWidth"></span><br>
+                    Survey Number: <span id="displaySurvey"></span><br>
+                    Adhar associated with the land: <span id="displayAdhar"></span><br>
+                    Amenities Provided: <span id="displayAmenities"></span><br>
+                    Types of Parkings: <span id="displayParkings"></span><br>
+                    Instructions for Guests: <span id="displayInstructions"></span>
+                </p>
+            </div>
+          </div>
+
+
+            </div>
           </div>
         </div>
       </div>
