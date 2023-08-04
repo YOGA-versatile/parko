@@ -28,6 +28,20 @@ body {
 .card-manage-card{
     align-items: center;
 }
+.book-card{
+    margin: 25%;
+    width:50%;
+    align-items: centre;
+}
+
+.book-card .card-body{
+    text-align: center;
+}
+
+
+.book-card i{
+    color: #FFD700;
+}
 
 #map{
     height: 50vh;

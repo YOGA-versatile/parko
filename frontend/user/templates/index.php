@@ -162,14 +162,53 @@ include "../libs/load.php";
 <div class="container mt-4">
     <div class="card">
       <div class="card-header">
-        <button type="button" class="btn btn-primary active" id="showList" data-target="content1">Show List</button>
+        <button type="button" class="btn btn-primary" id="showList" data-target="content1">Show List</button>
         <button type="button" class="btn btn-primary" id="showMap" data-target="content2">Show Map</button>
       </div>
       <div class="card-body">
-        <div id="content1" class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste fuga, quae distinctio hic molestiae nam magnam, recusandae rerum necessitatibus, similique ipsum. Ullam id culpa pariatur sit veritatis sapiente voluptate quaerat?</div>
+        <div id="content1" class="content" style="display: none;">
+            <div class="card mb-2 mt-1 book-card">
+              <div class="card-header">
+                RAM Parking
+              </div>
+              <div class="card-body">
+                <p class="card-text">Private Commercial</p>
+                <p class="card-text">₹5 per hour</p>
+                <p class="card-text">
+                <div id="rating-container" class="align-items-center">
+                  <span id="star-container"></span>
+                  <span id="rating-count">(1307)</span>
+                </div>
+            </p>
+            <a href="map.php?lat=9.9315573&lon=78.1022729" class="btn btn-primary">Directions</a>
+            </div>
+          </div>
+
+          <div class="card mb-2 mt-1 book-card">
+              <div class="card-header">
+                Yoga Parking
+              </div>
+              <div class="card-body">
+                <p class="card-text">Private Residential</p>
+                <p class="card-text">₹69 per hour</p>
+                <p class="card-text">
+                <div id="rating-container" class="align-items-center">
+                  <span id="star-container"></span>
+                  <span id="rating-count">(10907)</span>
+                </div>
+            </p>
+            <a href="map.php?lat=9.9315573&lon=78.1022729" class="btn btn-primary">Directions</a>
+            </div>
+          </div>
+
+        
 
 
-        <div id="content2" class="content" style="display: none;">
+
+        </div>
+
+
+        <div id="content2" class="content" >
             <div class="container-map">
                 <div id="map" style="height:50vh"></div>
                 <input type="text" class="form-control mb-2 mt-2" id="coordinates-container"readonly>
@@ -188,6 +227,7 @@ include "../libs/load.php";
     <?php load_temp("footer.php"); ?>
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="../js/map.js"></script>
+    <script src="../js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
