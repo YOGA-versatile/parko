@@ -134,3 +134,64 @@ var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 googleStreets.addTo(map);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JavaScript
+function validateFiles() {
+    const fileInput = document.getElementById("spaceFileMultiple");
+    const files = fileInput.files;
+
+    if (files.length < 6) {
+    displayErrorMessage("Please select at least six files.");
+    } else {
+    // Clear the error message when the validation passes
+    displayErrorMessage("");
+    }
+
+    for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const allowedFormats = ["image/jpeg", "image/jpg", "image/png"];
+
+    if (!allowedFormats.includes(file.type)) {
+        displayErrorMessage("Please select files in JPG, JPEG, or PNG format only.");
+        return;
+    }
+    }
+}
+
+function displayErrorMessage(message) {
+    const errorMsgElement = document.getElementById("error-msg");
+    errorMsgElement.textContent = message;
+}
+
+
+
+
+// JavaScript - Optional if you want to handle selections
+const checkboxes = document.querySelectorAll('.form-check-input');
+const dropdownButton = document.getElementById('dropdownMenuButton');
+
+dropdownButton.addEventListener('click', function () {
+  let selectedOptions = [];
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      selectedOptions.push(checkbox.value);
+    }
+  });
+
+  console.log("Selected options:", selectedOptions);
+});
+
+
+
