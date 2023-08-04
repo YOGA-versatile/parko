@@ -66,7 +66,6 @@ include "../libs/load.php";
                 <input type="text" class="form-control mb-2 mt-2" id="coordinates-container"readonly>
                 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
             </div>
-            
         </div>
 
         <div class="mb-2">
