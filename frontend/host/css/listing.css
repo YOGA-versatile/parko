@@ -16,3 +16,10 @@ body{
 #map {
     height: 300px;
   }
+
+
+.book-card{
+    width:50%;
+    margin:25%;
+    text-align:center;
+}
