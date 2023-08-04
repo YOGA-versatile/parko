@@ -1,18 +1,36 @@
-body{
+body {
     font-family: 'Heebo';
 }
-/* .jumbo-tron-container{
-    background-color: #ffffff;
-}
-.jumbo-tron{
-    background-color: #ffffff;
-}
-.jumbo-tron p{
-    font-size: 10px;
+
+.search-space {
+    align-items: center;
 }
 
-.jumbo-tron .btn-primary{
-    border-color: #2b6777;
-    background-color: #2b6777;
-    font-size: 15px;
-} */
+.custom-dropdown {
+    width: 40%;
+}
+
+.custom-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    min-width: 100%;
+}
+.custom-dropdown label {
+    width: max-content;
+}
+
+.custom-dropdown .btn-secondary {
+    width: 100%;
+    text-align: left;
+}
+
+.card-manage-card{
+    align-items: center;
+}
+
+#map{
+    height: 50vh;
+    border-style: solid;
+    border-color: black;
+}
