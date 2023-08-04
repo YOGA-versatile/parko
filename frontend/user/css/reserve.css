@@ -1,0 +1,53 @@
+body {
+    font-family: 'Heebo';
+}
+
+#star-container{
+    color: gold;
+}
+
+jumbotron {
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .gallery {
+    padding: 40px;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .prof-monetize{
+    border-style: solid;
+    border-radius: 16px;
+    border-width: 2px;
+}
+.comment-container{
+  border-style: solid;
+  border-color: #52ab98;
+
+}
+.comment-container .bg-1{
+  text-align: center;
+  background-color: #c8d8e4;
+}
+.comment-container .bg-2{
+  background-color: #c8d8e4;
+}
+.checkout{
+  text-align: center;
+  position: relative;
+}
+
+
+.fixed {
+  left: 0;
+  right: 0;
+  bottom: 5;
+  width: 100%;
+}

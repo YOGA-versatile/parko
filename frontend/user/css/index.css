@@ -48,3 +48,20 @@ body {
     border-style: solid;
     border-color: black;
 }
+
+.container-acc button {
+    display: inline-block;
+    padding: 20px;
+    width: 32%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    background-color: #fff;
+    margin: 2px;
+    cursor: pointer;
+}
+.container-acc button:hover{
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
