@@ -106,18 +106,30 @@
     border-color: #444;
 }
 
+/* Light Mode Styles */
+/* .light .navbar-nav {
+    flex-direction: column; 
+    align-items: center; 
+}
+
+
+.dark .navbar-nav {
+    flex-direction: column;
+    align-items: center; 
+} */
+
 .light .navbar-nav {
-    flex-direction: row; /* Ensures the nav items are in a row */
-    justify-content: space-between; /* Centers the nav items horizontally with space between them */
-    align-items: center; /* Centers the nav items vertically */
-    width: 100%; /* Centers the nav items vertically */
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
 }
 .dark .navbar-nav {
-    flex-direction: row; /* Ensures the nav items are in a row */
-    justify-content: space-between; /* Centers the nav items horizontally with space between them */
-    align-items: center; /* Centers the nav items vertically */
-    width: 100%; /* Centers the nav items vertically */
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
 }
+
+
 .dark .navbar-toggler-icon {
     background-color: #CCCCCC; /* Change this to a color that contrasts well with your dark background */
     border: none; /* Remove border for better visibility */

@@ -1,56 +1,86 @@
 body{
     font-family: 'Albert Sans';
 }
+
 [data-bs-scheme="light"] {
     background-color: #ffffff;
-    color: #333333;
-  }
-  
-  [data-bs-scheme="dark"] {
-    background-color: #333333;
-    color: #ffffff;
 }
-
-.map-container{
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
-}
-
-#fixedInput {
-    position: fixed;
-    top: 50px; /* Adjust the top position as needed */
-    left: 50px; /* Adjust the left position as needed */
-}
-
-#map {
-    height: 300px;
+[data-bs-scheme="dark"] {
+    background-color: #272727;
 }
 
 
-.book-card{
-    width:50%;
-    margin:25%;
-    text-align:center;
-    border: #388087;
+/* Light Mode Styles */
+.light .book-card {
+    width: 70%;
+    margin: 15%;
+    text-align: center;
+    border: 1px solid #388087;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.book-card .card-header{
+.light .book-card .card-header {
     background-color: #C2EDCE;
     color: #0076BE;
     font-size: 22px;
-    border: #C2EDCE;
+    border: 1px solid #C2EDCE;
 }
-.book-card .card-body strong{
+
+.light .book-card .card-body strong {
     color: #388087;
 }
 
-
-.space-container{
+.light .space-container {
     background-color: #F6F6F2;
-    border: #F6F6F2;
+    border: 1px solid #F6F6F2;
+}
+.light .space-container .card-body{
+    background-color: #F6F6F2;
+    border: 1px solid #F6F6F2;
 }
 
+/* Dark Mode Styles */
+.dark .book-card {
+    width: 70%;
+    margin: 15%;
+    text-align: center;
+    border: 1px solid #444444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .book-card .card-header {
+    background-color: #BADFE7;
+    color: #48BF91;
+    font-weight: bold;
+    font-size: 22px;
+    border: 1px solid #333333;
+}
+.dark .book-card .card-body{
+    background-color: #272727;
+}
+
+.dark .book-card .card-body strong {
+    color: #CCCCCC;
+}
+.dark .book-card .card-body span {
+    color: #0076BE;
+}
+
+.dark .space-container {
+    background-color: #333333;
+    border: 1px solid #333333;
+}
+.dark .space-container .card-body{
+    background-color: #333333;
+    border: 1px solid #333333;
+}
+
+.dark .whole-container{
+    background-color: #444444;
+}
+
+.dark hr{
+    color: whitesmoke;
+}
 
 

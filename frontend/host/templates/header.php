@@ -9,20 +9,22 @@
 		</button>
 
 		<div class="collapse navbar-collapse light" id="navbarNav">
-			<ul class="navbar-nav mx-auto light">
-				<li class="nav-item light">
-					<a class="nav-link light" href="index.php">Home</a>
-				</li>
-				<li class="nav-item light">
-					<a class="nav-link light" href="manage.php">Calendar</a>
-				</li>
-				<li class="nav-item light">
-					<a class="nav-link light" href="listing.php">Listing</a>
-				</li>
-				<li class="nav-item light">
-					<a class="nav-link light" href="profile.php">Profile</a>
-				</li>
-			</ul>
+		<ul class="navbar-nav mx-auto light">
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="index.php">Home</a>
+    </li>
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="manage.php">Calendar</a>
+    </li>
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="listing.php">Listing</a>
+    </li>
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="profile.php">Profile</a>
+    </li>
+</ul>
+
+
 
 			<ul class="navbar-nav ml-auto d-flex align-items-center light">
 				<li class="me-3 light">
