@@ -1,6 +1,7 @@
 body {
     font-family: 'Albert Sans';
 }
+
 /* Light Theme */
 [data-bs-scheme="light"] {
     background-color: #ffffff;
@@ -35,7 +36,7 @@ body {
 .custom-manage-card.light .card-header {
     text-align: center;
     background-color: #C2EDCE;
-    border-color: #C2EDCE;
+    border:none;
     color: #333333;
 }
 
@@ -53,7 +54,7 @@ body {
     background-color: #F6F6F2;
     color: #333333;
     text-align: center;
-    border-color: #F6F6F2;
+    border: none;
 }
 
 .booked-card.light {
@@ -81,7 +82,7 @@ body {
 }
 
 .jumbotron h2.dark {
-    color: #005085;
+    color: #48BF91;
 }
 
 .jumbotron .btn-primary.dark {
@@ -95,6 +96,7 @@ body {
 }
 
 .custom-manage-card.dark .card-header {
+    text-align: center;
     background-color: #5E8C76;
     border-color: #5E8C76;
     color: #ffffff;
@@ -118,8 +120,8 @@ body {
 }
 
 .booked-card.dark {
-    background-color: #1A4E59;
+    background-color: #0076BE;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-    border: #1A4E59;
+    border: #0076BE;
     color: whitesmoke;
 }

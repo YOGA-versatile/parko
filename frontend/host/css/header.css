@@ -1,109 +1,127 @@
-.custom-common-container {
+/* Light Mode Styles */
+.light .custom-common-container {
     background-color: #F6F6F2;
     border-bottom: 1px solid #e0e0e0;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.custom-common-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.icon {
-    margin-top: 0;
-}
-
-.navbar-nav .nav-link {
-    font-size: 16px;
+.light .navbar-nav .nav-link {
     color: #388087;
-    transition: color 0.3s;
 }
 
-.navbar-nav .nav-link:hover {
+.light .navbar-nav .nav-link:hover {
     color: #52ab98;
 }
-.dropdown-menu-end{
-    text-align: center;
 
-}
-
-.dropdown-menu {
-    text-align: center;
-    border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.light .dropdown-menu {
+    position: relative;
     background-color: #fff;
-    border-radius: 8px;
-    padding: 10px 0;
-}
-.dropdown-menu ul{
-    text-align: center;
-
+    text-decoration: none;
 }
 
-.dropdown-menu a {
+.light .dropdown-menu a {
     color: #388087;
-    transition: color 0.3s;
-    text-decoration: none; 
+    text-decoration: none;
+    
 }
 
-.dropdown-menu a:hover {
+.light .dropdown-menu a:hover {
     color: #52ab98;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-.tog {
+.light .tog {
     color: #52ab98;
 }
 
-#moon-icon,
-#sun-icon {
-    font-size: 20px; /* Change to your desired font size */
-    color: #6FB3B8; /* Change to your desired color */
+.light #moon-icon {
+    color: #6FB3B8;
 }
 
-#sun-icon {
+.light #sun-icon {
     display: none;
 }
 
-.dark-mode-switched #moon-icon {
+.light .form-check-input[type="checkbox"]:checked {
+    background-color: #48BF91;
+    border-color: #48BF91;
+}
+
+.light .form-check-input[type="checkbox"]:not(:checked) {
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+/* Dark Mode Styles */
+.dark .custom-common-container {
+    background-color: #333333;
+    border-bottom: 1px solid #444444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .navbar-nav .nav-link {
+    color: #CCCCCC;
+}
+
+.dark .navbar-nav .nav-link:hover {
+    color: #AACCBB;
+}
+
+.dark .dropdown-menu {
+    background-color: #388087;
+    text-decoration: none;
+}
+
+.dark .dropdown-menu a {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.dark .dropdown-menu a:hover {
+    color: #AACCBB;
+    text-decoration: none;
+}
+
+.dark .tog {
+    color: #AACCBB;
+}
+
+.dark #moon-icon {
     display: none;
 }
 
-.dark-mode-switched #sun-icon {
+.dark #sun-icon {
+    color: #CCCCCC;
     display: inline-block;
 }
 
-.form-check-input[type="checkbox"]:checked {
-    background-color: #48BF91; /* Change to your desired color */
-    border-color: #48BF91; /* Change to your desired color */
+.dark .form-check-input[type="checkbox"]:checked {
+    background-color: #116644;
+    border-color: #116644;
 }
 
-.form-check-input[type="checkbox"]:not(:checked) {
-    background-color: #ccc; /* Change to your desired color */
-    border-color: #ccc; /* Change to your desired color */
+.dark .form-check-input[type="checkbox"]:not(:checked) {
+    background-color: #444;
+    border-color: #444;
 }
 
-
-
-@media (max-width: 767px) {
-    .navbar-brand {
-        margin-right: auto;
-    }
-
-    .navbar-toggler {
-        margin-left: auto;
-    }
-
-    .navbar-nav {
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 14px;
-        margin: 5px 0;
-    }
+.light .navbar-nav {
+    flex-direction: row; /* Ensures the nav items are in a row */
+    justify-content: space-between; /* Centers the nav items horizontally with space between them */
+    align-items: center; /* Centers the nav items vertically */
+    width: 100%; /* Centers the nav items vertically */
+}
+.dark .navbar-nav {
+    flex-direction: row; /* Ensures the nav items are in a row */
+    justify-content: space-between; /* Centers the nav items horizontally with space between them */
+    align-items: center; /* Centers the nav items vertically */
+    width: 100%; /* Centers the nav items vertically */
+}
+.dark .navbar-toggler-icon {
+    background-color: #CCCCCC; /* Change this to a color that contrasts well with your dark background */
+    border: none; /* Remove border for better visibility */
+    padding: 0.25rem; /* Adjust padding for a better appearance */
+    width: 1.5em; /* Adjust the width if needed */
+    height: 1.5em; /* Adjust the height if needed */
 }
