@@ -1,18 +1,50 @@
 body{
-    font-family: 'Heebo';
+    font-family: 'Albert Sans';
 }
 .jumbo-tron-container{
     background-color: #ffffff;
 }
 .jumbo-tron{
     background-color: #ffffff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 .jumbo-tron p{
     font-size: 10px;
 }
+.jumbo-tron h2{
+    color: #6FB3B8;
+}
 
 .jumbo-tron .btn-primary{
-    border-color: #2b6777;
-    background-color: #2b6777;
+    border-color: #48BF91;
+    background-color: #48BF91;
     font-size: 15px;
+}
+.jumbo-tron .btn-primary:hover{
+    border-color: #6FB3B8;
+    background-color: #6FB3B8;
+}
+
+.custom-manage-card .card-header{
+    text-align: center;
+    background-color: #C2EDCE;
+}
+.card-header .btn-primary{
+    background-color: #0076BE;
+    color: whitesmoke;
+}
+
+.card-header .btn-primary:hover{
+    background-color: #4DB4D7;
+    color: whitesmoke;
+}
+
+.custom-card-body{
+    background-color: #F6F6F2;
+    text-align: center;
+}
+.booked-card{
+    background-color: #388087;
+    color: whitesmoke;
 }
