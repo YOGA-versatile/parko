@@ -16,7 +16,7 @@ include "../libs/load.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/map.css">
+    <link rel="stylesheet" href="/frontend/host/css/map.css">
     </script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css"/>
     <title>MapHost</title>
@@ -29,7 +29,7 @@ include "../libs/load.php";
 </head>
 <body>
     <div class="container custom-container">
-        <form class="custom-form">
+        <form class="custom-form" action="/post_host_data" method="POST" enctype="multipart/form-data">
         <div class="mb-2 custom-dropdown">
             <label for="userType">Types of User:</label>
             <select class="form-select" id="userType" name="userType">
@@ -43,19 +43,23 @@ include "../libs/load.php";
 
         <div class="mb-2">
             <label for="spaceName" class="form-label">Name of your space</label>
-            <input type="text" class="form-control" id="spaceName" required>
+            <input type="text" name="spaceName" class="form-control" id="spaceName" required>
         </div>
         <div class="mb-2">
             <label for="spaceSize" class="form-label">Space Size in Sq meter</label>
-            <input type="number" class="form-control" min="1" id="spaceSize" required>
+            <input type="number" name="spaceSize" class="form-control" min="1" id="spaceSize" required>
         </div>
         <div class="mb-2">
             <label for="spaceAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="spaceAddress" required>
+            <input type="text" name="spaceAddress" class="form-control" id="spaceAddress" required>
+        </div>
+        <div class="mb-2">
+            <label for="spaceAddress" class="form-label">City</label>
+            <input type="text" name="spaceCity" class="form-control" id="spaceCity" required>
         </div>
         <div class="mb-2">
             <label for="spacePincode" class="form-label">Pin Code</label>
-            <input type="number" class="form-control" min="100000" max="999999" id="spacePincode" required>
+            <input type="number" name="spacePincode" class="form-control" min="100000" max="999999" id="spacePincode" required>
         </div>
 
 
@@ -63,28 +67,28 @@ include "../libs/load.php";
             <label for="mapLocation" class="form-label">Location</label>
             <div class="container-map">
                 <div id="map" style="height:50vh"></div>
-                <input type="text" class="form-control mb-2 mt-2" id="coordinates-container"readonly>
+                <input type= "text" id="coordinates_container" name="coordinates_container" class="form-control mb-2 mt-2" readonly></input>
                 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
             </div>
-            
+
         </div>
 
         <div class="mb-2">
             <div class="row g-3 align-items-center">
                 <div class="col-6">
                     <label for="spaceLength" class="col-form-label">Space Length</label>
-                    <input type="number" id="spaceLength" class="form-control"  min=15 required>
+                    <input type="number" id="spaceLength" name="spaceLength" class="form-control"  min=15 required>
                 </div>
                 <div class="col-6">
                     <label for="spaceWidth" class="col-form-label">Space Width</label>
-                    <input type="number" id="spaceWidth" class="form-control"  min=7 required>
+                    <input type="number" id="spaceWidth"  name="spaceWidth" class="form-control"  min=7 required>
                 </div>
             </div>
         </div>
 
         <div class="mb-2">
             <label for="spaceFileMultiple" class="form-label">Multiple files input example</label>
-            <input class="form-control" type="file" id="spaceFileMultiple" multiple>
+            <input class="form-control" name="spaceFileMultiple" type="file" id="spaceFileMultiple" enctype="multipart/form-data" required>
         </div>
         <div id="error-msg" style="color: red;"></div>
 
@@ -92,11 +96,11 @@ include "../libs/load.php";
             <div class="row g-3 align-items-center">
                 <div class="col-6">
                     <label for="spaceSurvey" class="form-label">Survey Number</label>
-                    <input class="form-control" type="text" id="spaceSurvey" required>
+                    <input class="form-control" name="spaceSurvey" type="text" id="spaceSurvey" required>
                 </div>
                 <div class="col-6">
                     <label for="spaceAdhar" class="form-label">Adhar associated with the land</label>
-                    <input class="form-control" type="number" id="spaceAdhar" required>
+                    <input class="form-control" name="spaceAdhar" type="number" id="spaceAdhar" required>
                 </div>
             </div>
         </div>
@@ -106,48 +110,48 @@ include "../libs/load.php";
         <div class="mb-2 custom-dropdown">
     <label for="multipleOptions">Amenities Provided:</label>
     <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-secondary dropdown-toggle" type="button" name="dropdownMenuButton" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Select Options
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option1" value="option1">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Security Camera">
                 <label class="form-check-label" for="option1">Security Camera</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option2" value="option2">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Dust Free Zone">
                 <label class="form-check-label" for="option2">Dust Free Zone</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option3" value="option3">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Free Air">
                 <label class="form-check-label" for="option3">Free Air</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option4" value="option4">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="E-Vehicle Charge Point">
                 <label class="form-check-label" for="option4">E-Vehicle Charge Point</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option5" value="option5">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Vehicle Wash">
                 <label class="form-check-label" for="option5">Vehicle Wash</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option6" value="option6">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Puncture Works">
                 <label class="form-check-label" for="option6">Puncture Works</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option7" value="option7">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Two Wheeler Lock">
                 <label class="form-check-label" for="option7">Two Wheeler Lock</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option8" value="option8">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Four Wheeler Cover">
                 <label class="form-check-label" for="option8">Four Wheeler Cover</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option9" value="option9">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id=dropdownMenuButton value="Helmet Storage">
                 <label class="form-check-label" for="option9">Helmet Storage</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="option10" value="option10">
+                <input class="form-check-input" name="dropdownMenuButton" type="checkbox" id="dropdownMenuButton" value="Locker Facility">
                 <label class="form-check-label" for="option10">Locker Facility</label>
             </div>
         </div>
@@ -157,18 +161,18 @@ include "../libs/load.php";
         <div class="mb-2 mt-2 custom-checkboxes">
             <label for="parkingTypes">Types of Parkings:</label>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="subscriptionUser" value="subscriptionUser">
+                <input class="form-check-input" type="checkbox" id="subscriptionUser" name="subscriptionUser" value="subscriptionUser">
                 <label class="form-check-label" for="subscriptionUser">Subscription User</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="currentUser" value="currentUser">
+                <input class="form-check-input" type="checkbox" id="currentUser" name="currentUser" value="currentUser">
                 <label class="form-check-label" for="currentUser">Current User</label>
             </div>
         </div>
 
         <div class="mb-2">
             <label for="spaceInstructions" class="form-label">Add instructions for the Guest</label>
-            <input type="textarea" class="form-control" id="spaceInstructions" required>
+            <input type="textarea" class="form-control" id="spaceInstructions" name="spaceInstructions" required>
         </div>
 
         <p>By clicking the 'Submit' button, you confirm that all the details are correct and accurate to the best of your knowledge. And also you agree to the <a href="#">security policy</a> and assure are not violating the terms and conditions. Thank you for providing the necessary information.</p>
@@ -179,7 +183,7 @@ include "../libs/load.php";
     </div>
 
 
-<script src="../js/map.js"></script>
+<script src="/frontend/host/js/map.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -205,7 +209,7 @@ include "../libs/load.php";
                 marker.bindPopup(e.geocode.name).openPopup();
                 map.setView(e.geocode.center, 13);
                 function updateCoordinates() {
-                    var coordinatesContainer = document.getElementById('coordinates-container');
+                    var coordinatesContainer = document.getElementById('coordinates_container');
                     coordinatesContainer.textContent = marker.getLatLng().lat + ', ' + marker.getLatLng().lng;
                     if(flag==0){
                         coordinatesContainer.textContent = userMarker.getLatLng().lat + ', ' + userMarker.getLatLng().lng;
