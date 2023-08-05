@@ -51,3 +51,7 @@ jumbotron {
   bottom: 5;
   width: 100%;
 }
+
+.black-color {
+  color: black;
+}

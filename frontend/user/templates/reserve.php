@@ -50,8 +50,9 @@ include "../libs/load.php";
             </div>
           </div>
           <div class="col-md-4 text-end">
-            <i class="bi bi-bookmark"></i>
+            <i id="bookmark-icon" class="bi bi-bookmark"></i>
           </div>
+
         </div>
         <div class="row gallery">
           <div class="col-sm-6 col-md-4 col-lg-4">
@@ -196,11 +197,12 @@ include "../libs/load.php";
                         <input type="text" class="form-control" id="cost" readonly>
                     </div>
                     <button type="button" class="btn btn-primary" onclick="calculateCost()">Calculate Cost</button>
-                </form>
+                
             </div>
             <div class="modal-footer">
-                <!-- Footer content if needed... -->
+                <button type="submit" class="btn btn-info">Proceed</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
