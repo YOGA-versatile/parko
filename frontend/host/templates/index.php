@@ -25,11 +25,12 @@
 
 
     <div class="p-5 mb-4 rounded-3 jumbo-tron-container">
-        <div class="container py-5 jumbo-tron">
-            <h2 class="display-6 fw-bold">Hello Host</h2>
-            <p class="col-md-8 fs-5">Welcome to Parko, where you can easily monetize idle parking spots. Add and manage parking places to generate hassle-free revenue.</p>
-            <a class="btn btn-primary btn-lg" href="listing.php">Manage</a>
-        </div>
+
+      <div class="container-fluid py-5 jumbo-tron">
+        <h1 class="display-6 fw-bold">Hello Host</h1>
+        <p class="col-md-8 fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, corporis enim, ex itaque temporibus laudantium sunt ab earum officiis eum laboriosam eius nam </p>
+        <a class="btn btn-primary btn-lg" onclick="add_space('Add')">Listing</a>
+      </div>
     </div>
 
     <div class="container mt-4 custom-manage-card">
@@ -176,6 +177,12 @@
                 $(this).addClass('active');
             });
         });
+
+        function add_space(action){
+          if (action === "Add") {
+            window.location.href = "/get_listing";
+          }
+        }
     </script>
 </body>
 

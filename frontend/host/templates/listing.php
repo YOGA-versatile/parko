@@ -17,9 +17,9 @@ include "../libs/load.php";
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
     <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/listing.css"><link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="/frontend/host/css/header.css">
+    <link rel="stylesheet" href="/frontend/host/css/footer.css">
+    <link rel="stylesheet" href="/frontend/host/css/listing.css"><link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
 
 
@@ -33,7 +33,7 @@ include "../libs/load.php";
     <div class="container mt-4">
     <div class="row">
       <div class="col">
-        <a id="addCardBtn" class="btn btn-primary" href="map.php" target="_blank">SPACE +</a>
+        <a id="addCardBtn" class="btn btn-primary" target="_blank" onclick="add_space('Add')">SPACE +</a>
       </div>
     </div>
     <div class="row mt-4" id="cardsContainer">
@@ -45,29 +45,29 @@ include "../libs/load.php";
           <div class="card-body">
             <h5 class="card-title">Details Summary</h5>
             <div id="detailsSummary">
-
+            {% for data in data%}
             <div class="card mb-2 mt-1 book-card">
               <div class="card-header">
-                Yoga Parking
+              {{data.namespaceName}}
               </div>
               <div class="card-body">
               <h5 class="card-title">Space Information</h5>
                 <p class="card-text">
-                    Types of User: <span id="displayUserType"></span><br>
-                    Name of Space: <span id="displayName"></span><br>
-                    Space Size: <span id="displaySize"></span> Sq meter<br>
-                    Address: <span id="displayAddress"></span><br>
-                    Pin Code: <span id="displayPincode"></span><br>
-                    Location Coordinates: <span id="displayCoordinates"></span><br>
-                    Space Length: <span id="displayLength"></span><br>
-                    Space Width: <span id="displayWidth"></span><br>
-                    Survey Number: <span id="displaySurvey"></span><br>
-                    Adhar associated with the land: <span id="displayAdhar"></span><br>
-                    Amenities Provided: <span id="displayAmenities"></span><br>
-                    Types of Parkings: <span id="displayParkings"></span><br>
-                    Instructions for Guests: <span id="displayInstructions"></span>
+
+                    Types of User: <span id="displayUserType">{{data.userType}}</span><br>
+                    Name of Space: <span id="displayName">{{data.namespaceName}}</span><br>
+                    Space Size: <span id="displaySize">{{data.spaceSize}}</span> Sq meter<br>
+                    Address: <span id="displayAddress">{{data.spaceAddress}}</span><br>
+                    City: <span id="displayCity">{{data.spaceCity}}</span><br>
+                    Pin Code: <span id="displayPincode">{{data.spacePincode}}</span><br>
+                    Space Length: <span id="displayLength">{{data.spaceLength}}</span><br>
+                    Space Width: <span id="displayWidth">{{data.spaceWidth}}</span><br>
+                    Survey Number: <span id="displaySurvey">{{data.spaceSurvey}}</span><br>
+                    Amenities Provided: <span id="displayAmenities">{{data.dropdownMenuButton}}</span><br>
+                    Instructions for Guests: <span id="displayInstructions">{{data.spaceInstructions}}</span>
                 </p>
             </div>
+            {% endfor %} 
           </div>
 
 
@@ -76,7 +76,6 @@ include "../libs/load.php";
         </div>
       </div>
     </div>
-  </div>
 
   <!-- Modal for input form -->
   <div class="modal fade " id="inputModal" tabindex="-1" aria-labelledby="inputModalLabel" aria-hidden="true">
@@ -112,7 +111,7 @@ include "../libs/load.php";
   </div>
   {% include "footer.php" %}
     <!-- Add the Bootstrap JS and jQuery scripts -->
-    <script src="../js/listing.js"></script>
+    <script src="/frontend/host/js/listing.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -135,6 +134,12 @@ include "../libs/load.php";
             if (!results) return null;
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        function add_space(action){
+          if (action === "Add") {
+            window.location.href = "/get_map";
+          }
         }
     </script>
 </body>
