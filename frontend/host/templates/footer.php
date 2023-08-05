@@ -1,5 +1,5 @@
-<footer class="navbar navbar-expand-md custom-common-footer ">
-        <div class="container custom-footer">
+<footer class="navbar navbar-expand-md custom-common-footer mt-5">
+        <div class="container-fluid custom-footer">
             <div class="navbar-brand">
             <a class="nav-link" style="font-size:15px">© 2023 TODO-INC, All Rights Reserved</a>
             </div>
