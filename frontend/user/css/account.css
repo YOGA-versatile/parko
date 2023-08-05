@@ -16,8 +16,8 @@ body{
     background-color: #f8f8f8;
 }
 
-.container-acc button {
-   display: inline-block;
+.container-acc .card-button {
+    display: inline-block;
     padding: 20px;
     width: 32%;
     border: none;
@@ -36,20 +36,6 @@ body{
 .container-acc i{
     font-size: 25px;
 }
-
-/* .button-card {
-    display: inline-block;
-    padding: 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    background-color: #fff;
-    margin: 5px;
-    cursor: pointer;
-  }
-
-  .button-card:hover {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  } */
+.book-card i{
+    color: #FFD700;
+}

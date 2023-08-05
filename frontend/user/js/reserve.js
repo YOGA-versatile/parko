@@ -59,3 +59,35 @@ function calculateCost() {
 
   document.getElementById('cost').value = "₹" + cost.toFixed(2);
 }
+
+
+
+
+  // Check if the bookmark state is stored in local storage
+  const storedBookmarkState = localStorage.getItem('bookmarkState');
+  let bookmarkState = storedBookmarkState ? parseInt(storedBookmarkState) : 0;
+
+  const bookmarkIcon = document.getElementById('bookmark-icon');
+
+  // Function to toggle the bookmark icon class and state
+  function toggleBookmark() {
+    bookmarkState = 1 - bookmarkState; // Toggle between 0 and 1
+    if (bookmarkState === 1) {
+      bookmarkIcon.classList.remove('bi-bookmark');
+      bookmarkIcon.classList.add('bi-bookmark-fill');
+    } else {
+      bookmarkIcon.classList.remove('bi-bookmark-fill');
+      bookmarkIcon.classList.add('bi-bookmark');
+    }
+    
+    // Save the updated state to local storage
+    localStorage.setItem('bookmarkState', bookmarkState);
+  }
+
+  // Add a click event listener to the bookmark icon
+  bookmarkIcon.addEventListener('click', toggleBookmark);
+
+  // Set the initial icon class based on the initial state
+  if (bookmarkState === 1) {
+    bookmarkIcon.classList.add('bi-bookmark-fill');
+  }
