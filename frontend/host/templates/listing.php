@@ -121,10 +121,10 @@ include "../libs/load.php";
 				</div>
 			</div>
 		</div>
-    <!-- <div class="form-check form-switch">
+    <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="dark-mode-switch">
         <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
-    </div> -->
+    </div>
 
 		<?php load_temp("footer.php"); ?>
 		<script src="../js/listing.js"></script>
@@ -132,16 +132,16 @@ include "../libs/load.php";
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-    //   const darkModeSwitch = document.getElementById('dark-mode-switch');
-    // const body = document.body;
+      const darkModeSwitch = document.getElementById('dark-mode-switch');
+    const body = document.body;
     
-    // darkModeSwitch.addEventListener('change', () => {
-    //   if (darkModeSwitch.checked) {
-    //     body.setAttribute('data-bs-scheme', 'dark');
-    //   } else {
-    //     body.setAttribute('data-bs-scheme', 'auto');
-    //   }
-    // });
+    darkModeSwitch.addEventListener('change', () => {
+      if (darkModeSwitch.checked) {
+        body.setAttribute('data-bs-scheme', 'dark');
+      } else {
+        body.setAttribute('data-bs-scheme', 'auto');
+      }
+    });
     </script>
 	</body>
 </html>
