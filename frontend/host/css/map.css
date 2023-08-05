@@ -1,5 +1,5 @@
 body{
-    font-family: 'Heebo';
+    font-family: 'Albert Sans';
     height :  100%;
 }
 
@@ -20,10 +20,6 @@ body{
     margin-bottom: 2%;
     width: 100%;
 }
-
-/* .container-map{
-    
-} */
 
 #map{
     height: 50vh;

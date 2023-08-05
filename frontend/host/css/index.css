@@ -29,6 +29,7 @@ body{
 .custom-manage-card .card-header{
     text-align: center;
     background-color: #C2EDCE;
+    border-color: #C2EDCE;
 }
 .card-header .btn-primary{
     background-color: #0076BE;
@@ -43,8 +44,11 @@ body{
 .custom-card-body{
     background-color: #F6F6F2;
     text-align: center;
+    border-color: #F6F6F2;
 }
 .booked-card{
     background-color: #388087;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border: #388087;
     color: whitesmoke;
 }

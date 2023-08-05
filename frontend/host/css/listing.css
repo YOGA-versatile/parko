@@ -1,6 +1,16 @@
 body{
-    font-family: 'Heebo';
+    font-family: 'Albert Sans';
 }
+[data-bs-scheme="light"] {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  [data-bs-scheme="dark"] {
+    background-color: #333333;
+    color: #ffffff;
+}
+
 .map-container{
     border-width: 2px;
     border-color: black;
@@ -15,11 +25,32 @@ body{
 
 #map {
     height: 300px;
-  }
+}
 
 
 .book-card{
     width:50%;
     margin:25%;
     text-align:center;
+    border: #388087;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.book-card .card-header{
+    background-color: #C2EDCE;
+    color: #0076BE;
+    font-size: 22px;
+    border: #C2EDCE;
+}
+.book-card .card-body strong{
+    color: #388087;
+}
+
+
+.space-container{
+    background-color: #F6F6F2;
+    border: #F6F6F2;
+}
+
+
+
