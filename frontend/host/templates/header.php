@@ -1,38 +1,65 @@
-<header class="navbar navbar-expand-md custom-common-container">
-    <div class="container-md custom-common-header">
-        <!-- Left-aligned item -->
-        <div class="navbar-brand">
-            <img class="icon justify-content-left" height="40px" src="../asset/pics/parko.png" alt="Parko Logo">
-        </div>
-        <!-- Center-aligned item -->
-        <ul class="navbar-nav mx-auto nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="manage.php">Calendar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="listing.php">Listing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="profile.php">Profile</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown dropdown-end">
-                <a href="#" class="bi bi-list" data-bs-toggle="dropdown"></a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a href="account.php"><i class="bi bi-person"></i> Account</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a href="notification.php"><i class="bi bi-bell"></i> Notification</a></li>
-                    <li><a href="help.php"><i class="bi bi-headset"></i> Help Center</a></li>
-                    <li><a href="about.php"><i class="bi bi-info-circle"></i> About</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a href="../../user/templates" class="tog">Switch - Guest</a></li>
-                    <li><a href="../../auth.php" class="tog">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+<header class="navbar navbar-expand-md custom-common-container light">
+	<div class="container-md custom-common-header light">
+		<a class="navbar-brand light" href="#">
+			<img class="icon light" height="40px" src="../asset/pics/parko.png" alt="Parko Logo" />
+		</a>
+
+		<button class="navbar-toggler light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon light"></span>
+		</button>
+
+		<div class="collapse navbar-collapse light" id="navbarNav">
+		<ul class="navbar-nav mx-auto light">
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="index.php">Home</a>
+    </li>
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="manage.php">Calendar</a>
+    </li>
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="listing.php">Listing</a>
+    </li>
+    <li class="nav-item light mx-2">
+        <a class="nav-link light" href="profile.php">Profile</a>
+    </li>
+</ul>
+
+
+
+			<ul class="navbar-nav ml-auto d-flex align-items-center light">
+				<li class="me-3 light">
+					<div class="form-check form-switch light">
+						<input class="form-check-input light" type="checkbox" id="dark-mode-switch" />
+						<label class="form-check-label light" for="dark-mode-switch">
+							<i class="bi bi-moon light" id="moon-icon"></i>
+							<i class="bi bi-brightness-high light" id="sun-icon" style="display: none;"></i>
+						</label>
+					</div>
+				</li>
+				<li class="nav-item dropdown light">
+					<a class="nav-link dropdown-toggle light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<span class="bi bi-person light"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-end light" aria-labelledby="navbarDropdown" data-bs-popper="static" style="text-align: center;">
+						<li>
+							<a href="account.php" class="light"><i class="bi bi-person"></i> Account</a>
+						</li>
+						<li><hr class="dropdown-divider light" /></li>
+						<li>
+							<a href="notification.php" class="light><i class="bi bi-bell"></i> Notification</a>
+						</li>
+						<li>
+							<a href="help.php" class="light><i class="bi bi-headset"></i> Help Center</a>
+						</li>
+						<li>
+							<a href="about.php" class="light><i class="bi bi-info-circle"></i> About</a>
+						</li>
+						<li><hr class="dropdown-divider light" /></li>
+						<li><a href="../../user/templates" class="tog">Switch - Guest</a></li>
+						<li><a href="../../auth.php" class="tog">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 </header>

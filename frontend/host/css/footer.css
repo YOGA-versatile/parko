@@ -1,22 +1,28 @@
 body{
     font-family: 'Heebo';
 }
-.custom-common-footer{
-    position: relative;
-    right : 0 ;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #6FB3B8;
-    width:100%;
-    height:100%;
-    position: relative;
-    border-width: 1px;
+.light .custom-footer {
     background-color: #6FB3B8;
     color: #F6F6F2;
 }
+.light .todo {
+    color: black;
+}
 
-.custom-common-footer a{
+.light .custom-footer a {
     color: #F6F6F2;
+    font-size: 15px;
+}
+
+/* Dark Mode Styles */
+.dark .custom-footer {
+    background-color: #388087;
+    color: #CCCCCC;
+}
+.dark .todo {
+    color: whitesmoke;
+}
+.dark .custom-footer a {
+    color: #CCCCCC;
     font-size: 15px;
 }

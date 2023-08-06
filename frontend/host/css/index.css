@@ -1,50 +1,127 @@
-body{
+body {
     font-family: 'Albert Sans';
 }
-.jumbo-tron-container{
+
+/* Light Theme */
+[data-bs-scheme="light"] {
     background-color: #ffffff;
-}
-.jumbo-tron{
-    background-color: #ffffff;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-}
-.jumbo-tron p{
-    font-size: 10px;
-}
-.jumbo-tron h2{
-    color: #6FB3B8;
 }
 
-.jumbo-tron .btn-primary{
+.jumbotron-container.light {
+    background-color: #ffffff;
+}
+
+.jumbotron.light {
+    background-color: #ffffff;
+}
+
+.jumbotron p.light {
+    color: #48BF91;
+}
+
+.jumbotron h2.light {
+    color: #0076BE;
+}
+
+.jumbotron .btn-primary.light {
     border-color: #48BF91;
     background-color: #48BF91;
-    font-size: 15px;
-}
-.jumbo-tron .btn-primary:hover{
-    border-color: #6FB3B8;
-    background-color: #6FB3B8;
+    color: #ffffff;
 }
 
-.custom-manage-card .card-header{
+.jumbotron .btn-primary.light:hover {
+    border-color: #6FB3B8;
+}
+
+.custom-manage-card.light .card-header {
     text-align: center;
     background-color: #C2EDCE;
+    border:none;
+    color: #333333;
 }
-.card-header .btn-primary{
+
+.card-header .btn-primary.light {
     background-color: #0076BE;
     color: whitesmoke;
 }
 
-.card-header .btn-primary:hover{
+.card-header .btn-primary.light:hover {
     background-color: #4DB4D7;
     color: whitesmoke;
 }
 
-.custom-card-body{
+.custom-card-body.light {
     background-color: #F6F6F2;
+    color: #333333;
     text-align: center;
+    border: none;
 }
-.booked-card{
+
+.booked-card.light {
     background-color: #388087;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border: #388087;
+    color: whitesmoke;
+}
+
+/* Dark Mode Styles */
+[data-bs-scheme="dark"] {
+    background-color: #272727;
+}
+
+.jumbotron-container.dark {
+    background-color: #272727;
+}
+
+.jumbotron.dark {
+    background-color: #272727;
+}
+
+.jumbotron p.dark {
+    color: #8CAE97;
+}
+
+.jumbotron h2.dark {
+    color: #48BF91;
+}
+
+.jumbotron .btn-primary.dark {
+    border-color: #2C6D56;
+    background-color: #2C6D56;
+    color: #ffffff;
+}
+
+.jumbotron .btn-primary.dark:hover {
+    border-color: #226678;
+}
+
+.custom-manage-card.dark .card-header {
+    text-align: center;
+    background-color: #5E8C76;
+    border-color: #5E8C76;
+    color: #ffffff;
+}
+
+.card-header .btn-primary.dark {
+    background-color: #005085;
+    color: whitesmoke;
+}
+
+.card-header .btn-primary.dark:hover {
+    background-color: #3C7D82;
+    color: whitesmoke;
+}
+
+.custom-card-body.dark {
+    background-color: #272727;
+    color: #ffffff;
+    text-align: center;
+    border-color: #272727;
+}
+
+.booked-card.dark {
+    background-color: #0076BE;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border: #0076BE;
     color: whitesmoke;
 }
