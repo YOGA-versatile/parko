@@ -1,9 +1,21 @@
 body{
     font-family: 'Albert Sans';
 }
+
+[data-bs-scheme="light"] {
+    background-color: #ffffff;
+}
+
+[data-bs-scheme="dark"] {
+    background-color: #272727;
+    color: #ffffff;
+}
 .jumbo-tron{
     justify-content: center;
     text-align: center;
+}
+.jumbo-tron.light h1{
+    color: #48BF91;
 }
 .jumbo-tron img{
     text-align: center;
@@ -11,21 +23,75 @@ body{
 .jumbo-tron i{
     color: #FFD700;
 }
+.jumbo-tron p{
+    color: #388087;
+}
 .prof-monetize{
-    border-style: solid;
-    border-radius: 16px;
-    border-width: 2px;
-    border-color: #2b6777;
+    border: none;
 }
-.comment-container{
-    border-style: solid;
-    border-color: #52ab98;
 
+.prof-monetize.single-card{
+    border: none;
 }
-.comment-container .bg-1{
+.comment-container.light{
+    background-color: #F6F6F2;
+    border-color: #C2EDCE;
+    border-radius: 16px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+.comment-container h1{
+    font-weight: 200;
+}
+
+
+.selector-date.light{
+    border-radius: 16px;
+    background-color: #95D8EB;
+    border-color: #95D8EB;
     text-align: center;
-    background-color: #c8d8e4;
 }
-.comment-container .bg-2{
-    background-color: #c8d8e4;
+.control-card.light{
+    text-align: center;
+    background-color: #C2EDCE;
+    border: none;
+    border-radius: 16px;
+}
+.control-card.light h4{
+    color: #0076BE;
+}
+
+.count.light{
+    color:#272727;
+}
+
+.count .dark{
+    color:#ffffff;
+}
+
+
+.jumbo-tron.dark h1{
+    color: #48BF91;
+}
+.comment-container.dark{
+    background-color: #272727;
+    border-color: #C2EDCE;
+    border-radius: 16px;
+    color:#ffffff;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+.selector-date.dark{
+    border-radius: 16px;
+    background-color: #0076BE;
+    border-color: #0076BE;
+    color:#ffffff;
+    text-align: center;
+}
+.control-card.dark{
+    text-align: center;
+    background-color: #48BF91;
+    border: none;
+    border-radius: 16px;
+}
+.control-card.dark h4{
+    color: #F6F6F2;
 }

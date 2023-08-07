@@ -16,7 +16,7 @@ body {
 }
 
 .jumbotron p.light {
-    color: #48BF91;
+    color: #272727;
 }
 
 .jumbotron h2.light {
@@ -78,7 +78,7 @@ body {
 }
 
 .jumbotron p.dark {
-    color: #8CAE97;
+    color: whitesmoke;
 }
 
 .jumbotron h2.dark {
@@ -94,11 +94,18 @@ body {
 .jumbotron .btn-primary.dark:hover {
     border-color: #226678;
 }
+.custom-manage-card  .light{
+    border: none;
+}
+
+.custom-manage-card  .dark{
+    border-color: #5E8C76;
+}
 
 .custom-manage-card.dark .card-header {
     text-align: center;
     background-color: #5E8C76;
-    border-color: #5E8C76;
+    border: none;
     color: #ffffff;
 }
 

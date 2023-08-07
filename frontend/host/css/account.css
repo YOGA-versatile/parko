@@ -1,7 +1,15 @@
 body{
-    font-family: 'Heebo';
+    font-family: 'Albert Sans';
 }
 
+[data-bs-scheme="light"] {
+    background-color: #ffffff;
+}
+
+[data-bs-scheme="dark"] {
+    background-color: #272727;
+    color: #ffffff;
+}
 .container-content {
     display: flex;
     justify-content: center;
@@ -16,18 +24,23 @@ body{
     background-color: #f8f8f8;
 }
 
-.container-acc button {
-   display: inline-block;
+.card-button {
+    display: inline-block;
     padding: 20px;
-    width: 32%;
+    width: 30%;
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #C2EDCE;
     transition: all 0.3s ease;
-    background-color: #fff;
     margin: 2px;
     cursor: pointer;
 }
+.card-caro .light{
+    background-color: #BADFE7;
+}
+
+
 .container-acc button:hover{
     transform: scale(0.95);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -36,20 +49,21 @@ body{
 .container-acc i{
     font-size: 25px;
 }
+.book-card i{
+    color: #FFD700;
+}
 
-/* .button-card {
-    display: inline-block;
-    padding: 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    background-color: #fff;
-    margin: 5px;
-    cursor: pointer;
-  }
+/* Custom CSS for Mobile Responsiveness */
+@media (max-width: 767px) {
+    .card-button {
+        width: 100%; /* Full width on mobile */
+    }
+}
 
-  .button-card:hover {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  } */
+/* Custom CSS for Laptop Responsiveness */
+@media (min-width: 768px) {
+    .container-acc .card-button {
+        width: 90%;
+        height: 90%;
+    }
+}
