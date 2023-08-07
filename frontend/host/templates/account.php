@@ -33,7 +33,7 @@ include "../libs/load.php";
 		</div>
 
 		<div class="container-content">
-        <div class="container container-acc py-1 mt-2">
+        <div class="container container-acc py-1 mt-2 light">
             <div class="row row-cols-1 row-cols-md-3 g-3 mt-2">
                 <!-- Personal Info Card and Modal -->
                 <div class="col">
@@ -192,7 +192,7 @@ include "../libs/load.php";
 								</div>
 								<div class="modal-body">
                                     <div class="card mb-2 mt-1 book-card">
-                                        <div class="card-header "> RAM Parking </div>
+                                        <div class="card-header "></div>
                                             <div class="card-body">
                                                 <p class="card-text">Total Earned</p>
                                                 <p class="card-text">₹5648</p>

@@ -47,15 +47,16 @@
 				</div>
 				<div class="card-body custom-card-body light">
 					<div id="content1" class="content">
-						<div class="custom-card light d-flex">
-							<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 light">
+						<div class="custom-card light">
+							<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 light gy-3">
 								<div class="col">
 									<div class="card text-center mb-3 booked-card light">
 										<div class="card-body">
 											<h5 class="card-title">Vehicle number</h5>
 											<hr />
 											<h7 class="card-text">Vehicle type</h7><br />
-											<h7 class="card-text">Time</h7>
+											<h7 class="card-text">Time</h7><br />
+											<a type="button" class="btn btn-info">Parked In</a>
 										</div>
 									</div>
 								</div>
@@ -65,7 +66,8 @@
 											<h5 class="card-title">Vehicle number</h5>
 											<hr />
 											<h7 class="card-text">Vehicle type</h7><br />
-											<h7 class="card-text">Time</h7>
+											<h7 class="card-text">Time</h7><br />
+											<a type="button" class="btn btn-info">Parked In</a>
 										</div>
 									</div>
 								</div>
@@ -75,7 +77,8 @@
 											<h5 class="card-title">Vehicle number</h5>
 											<hr />
 											<h7 class="card-text">Vehicle type</h7><br />
-											<h7 class="card-text">Time</h7>
+											<h7 class="card-text">Time</h7><br />
+											<a type="button" class="btn btn-info">Parked In</a>
 										</div>
 									</div>
 								</div>
@@ -83,7 +86,7 @@
 						</div>
 					</div>
 					<div id="content2" class="content" style="display: none;">
-						<div class="custom-card light d-flex">
+						<div class="custom-card light ">
 							<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 								<div class="col">
 									<div class="card text-center mb-3 booked-card light">
@@ -119,7 +122,7 @@
 						</div>
 					</div>
 					<div id="content3" class="content" style="display: none;">
-						<div class="custom-card light d-flex">
+						<div class="custom-card light ">
 							<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 								<div class="col">
 									<div class="card text-center mb-3 booked-card light">

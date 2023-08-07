@@ -16,15 +16,22 @@ body{
     align-items: center;
 }
 
-.container-acc {
+.container-acc.light {
     width: 80%;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f8f8f8;
 }
+.container-acc.dark {
+    width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: black;
+}
 
-.card-button {
+.card-button.light {
     display: inline-block;
     padding: 20px;
     width: 30%;
@@ -36,8 +43,25 @@ body{
     margin: 2px;
     cursor: pointer;
 }
-.card-caro .light{
+.card-button.dark {
+    display: inline-block;
+    padding: 20px;
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #48BF91;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    margin: 2px;
+    cursor: pointer;
+}
+.card-caro.light{
     background-color: #BADFE7;
+}
+.card-caro.dark{
+    background-color: #0076BE;
+    color:#ffffff;
 }
 
 
