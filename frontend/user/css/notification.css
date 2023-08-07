@@ -1,23 +1,39 @@
 body{
-    font-family: 'Heebo';
+  font-family: 'Albert Sans';
 }
 
+[data-bs-scheme="light"] {
+  background-color: #ffffff;
+}
+
+[data-bs-scheme="dark"] {
+  background-color: #272727;
+  color: #ffffff;
+}
 
 .notification-container {
   margin: 20px auto;
 }
-.notification-container h2{
+.notification-container.light h2{
   color: #2b6777;
+  text-align: center;
+}
+.notification-container.dark h2{
+  color: #52ab98;
   text-align: center;
 }
 
 .notification {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: none;
   margin-bottom: 10px;
-  background-color: #c8d8e4;
+  background-color: #0076BE;
+  color: #ffffff;
+  border-radius: 16px;
   cursor: pointer;
 }
+
+
 
 .notification-content {
   white-space: nowrap;
@@ -35,9 +51,16 @@ body{
   margin-top: 5px;
 }
 
-.notification-box{
+.notification-box.light{
   max-width: 80%;
   border-radius: 16px;
   border-style: solid;
   border-color: #4DB4D7;
+}
+
+.notification-box.dark{
+  max-width: 80%;
+  border-radius: 16px;
+  border-style: solid;
+  border-color: #0076BE;
 }

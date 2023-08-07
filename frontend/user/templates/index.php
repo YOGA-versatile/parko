@@ -9,13 +9,18 @@ include "../libs/load.php";
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="">
       <meta name="generator" content="Hugo 0.112.5">
+		<link rel="shortcut icon" type="image/x-icon" href="../asset/icons/icon.ico" />
+		<title>Parko</title>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
       <link href="../vendor/assets/dist/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-      <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Albert+Sans" rel="stylesheet" />
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
       <script src="https://unpkg.com/@turf/turf@6.5.0"></script>
       <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
@@ -25,25 +30,25 @@ include "../libs/load.php";
       <link rel="stylesheet" href="../css/footer.css">
       <link rel="stylesheet" href="../css/index.css">
     </head>
-    <body>
+    <body data-bs-scheme="light">
       <?php load_temp("header.php"); ?> 
       <div class="container search-space mt-4">
       <div class="row">
-        <div class="col-6">
+        <div class="col-8">
           <form class="d-flex">
-            <label for="searchSpace" class="visually-hidden">Search</label>
-            <input type="text" class="form-control me-2" id="searchSpace" placeholder="Search">
-            <button type="submit" class="btn btn-primary bi bi-search"></button>
+            <label for="searchSpace" class="visually-hidden ">Search</label>
+            <input type="text" class="form-control me-1 search-box" id="searchSpace" placeholder="Search a city..">
+            <button type="submit" class="btn btn-primary bi bi-search search-button"></button>
           </form>
         </div>
-        <div class="col-6">
+        <div class="col-4">
           <form class="d-flex">
-            <button type="button" class="btn btn-primary bi bi-filter" data-bs-toggle="modal" data-bs-target="#filterModal"> Filters</button>
+            <button type="button" class="btn btn-primary bi bi-filter filter-button" data-bs-toggle="modal" data-bs-target="#filterModal"> Filters</button>
           </form>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal fade filter-modal" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -74,18 +79,8 @@ include "../libs/load.php";
                 </div>
                 <hr>
                 <div class="mb-3">
-                  <label for="minPrice" class="form-label">Min Price:</label>
-                  <input type="number" class="form-control" id="minPrice" name="minPrice" min="2" max="100" step="2" value="2" placeholder="Enter minimum price">
-                </div>
-                <hr>
-                <div class="mb-3">
                   <label for="maxPrice" class="form-label">Max Price:</label>
                   <input type="number" class="form-control" id="maxPrice" name="maxPrice" min="2" max="100" step="2" value="100" placeholder="Enter maximum price">
-                </div>
-                <hr>
-                <div class="mb-3">
-                  <label for="radius" class="form-label">Radius:</label>
-                  <input type="number" class="form-control" id="radius" name="maxPrice" min="2" value="1" placeholder="Enter radius from your location in Km">
                 </div>
                 <hr>
                 <div class="container mt-4">
@@ -139,62 +134,62 @@ include "../libs/load.php";
                     </div>
                   </div>
                   <hr>
-                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Apply</button>
+                  <button style="text-align:center;" type="submit" class="btn btn-primary filter-submit" data-bs-dismiss="modal">Apply</button>
                 </div>
             </form>
           </div>
         </div>
+        
       </div>
     </div>
-    <div class="container mt-4">
-      <div class="card">
+    <div class="container mt-4 ">
+      <div class="card list-container">
         <div class="card-header">
-          <button type="button" class="btn btn-primary bi bi-list-task" id="showList" data-target="content1"> Show List</button>
-          <button type="button" class="btn btn-primary bi bi-map" id="showMap" data-target="content2"> Show Map</button>
+          <button type="button" class="btn btn-primary bi bi-list-task show-button" id="showList" data-target="content1"> Show List</button>
+          <button type="button" class="btn btn-primary bi bi-map show-button" id="showMap" data-target="content2"> Show Map</button>
         </div>
         <div class="card-body">
           <div id="content1" class="content" style="display: none;">
-            <div class="card mb-2 mt-1 book-card">
+            <div class="card mb-2 mt-1 book-card light">
               <div class="card-header"> RAM Parking </div>
               <div class="card-body">
                 <p class="card-text">Private Commercial</p>
                 <p class="card-text">₹5 per hour</p>
-                <p class="card-text">
                 <div id="rating-container" class="align-items-center">
                   <span id="star-container"></span>
                   <span id="rating-count">(1307)</span>
                 </div>
-                </p>
-                <a href="reserve.php" class="btn btn-info">More</a>
-                <a href="map.php?lat=9.9315573&lon=78.1022729" class="btn btn-primary">Directions</a>
+                
+                <a href="reserve.php" class="btn btn-info card-button">More</a>
+                <a href="map.php?lat=9.9315573&lon=78.1022729" class="btn btn-primary card-button">Directions</a>
               </div>
             </div>
 
-            <div class="card mb-2 mt-1 book-card">
+            <div class="card mb-2 mt-1 book-card light">
               <div class="card-header"> Yoga Parking </div>
               <div class="card-body">
                 <p class="card-text">Private Residential</p>
                 <p class="card-text">₹69 per hour</p>
-                <p class="card-text">
                 <div id="rating-container" class="align-items-center">
                   <span id="star-container"></span>
                   <span id="rating-count">(10907)</span>
                 </div>
-                </p>
-                <a href="reserve.php" class="btn btn-info">More</a>
-                <a href="map.php?lat=9.9315573&lon=78.1022729" class="btn btn-primary">Directions</a>
+                <a href="reserve.php" class="btn btn-info card-button">More</a>
+                <a href="map.php?lat=9.9315573&lon=78.1022729" class="btn btn-primary card-button">Directions</a>
               </div>
             </div>
+            
           </div>
           <div id="content2" class="content">
             <div class="container-map">
-              <div id="map" style="height:50vh"></div>
+              <div id="map" style="height:75vh"></div>
               <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
             </div>
           </div>
         </div>
       </div>
-    </div> <?php load_temp("footer.php"); ?>
+    </div> 
+    <?php load_temp("footer.php"); ?>
     <!-- Add the Bootstrap JS and jQuery scripts -->
     <script src="../js/map.js"></script>
     <script src="../js/index.js"></script>
@@ -202,6 +197,56 @@ include "../libs/load.php";
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+      
+ const darkModeSwitch = document.getElementById('dark-mode-switch');
+                const body = document.body;
+                const moonIcon = document.getElementById('moon-icon');
+                const sunIcon = document.getElementById('sun-icon');
+
+                // Function to toggle dark mode styles
+                function toggleDarkMode() {
+                    if (darkModeSwitch.checked) {
+                        body.setAttribute('data-bs-scheme', 'dark');
+                        toggleElementsLightToDark();
+                        moonIcon.style.display = 'none';
+                        sunIcon.style.display = 'inline-block';
+                    } else {
+                        body.setAttribute('data-bs-scheme', 'light');
+                        // Function to toggle elements from light to dark
+        toggleElementsDarkToLight();
+                        moonIcon.style.display = 'inline-block';
+                        sunIcon.style.display = 'none';
+                    }
+                }
+
+                // Toggle elements from dark to light
+                function toggleElementsDarkToLight() {
+                    const elements = document.querySelectorAll('.dark');
+                    elements.forEach(element => {
+                        element.classList.remove('dark');
+                        element.classList.add('light');
+                    });
+                }
+
+                // Toggle elements from light to dark
+                function toggleElementsLightToDark() {
+                    const elements = document.querySelectorAll('.light');
+                    elements.forEach(element => {
+                        element.classList.remove('light');
+                        element.classList.add('dark');
+                    });
+                }
+
+                // Call the function on page load
+                toggleDarkMode();
+
+                // Listen for dark mode switch changes
+                darkModeSwitch.addEventListener('change', toggleDarkMode);
+
+
+
+
+
       $(document).ready(function() {
         // Handle button clicks to show the corresponding content
         $('.btn').on('click', function() {
@@ -290,5 +335,12 @@ include "../libs/load.php";
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
       });
       googleStreets.addTo(map);
+
+
+
+
+     
     </script>
     </body>
+
+    

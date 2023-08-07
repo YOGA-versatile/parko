@@ -1,55 +1,77 @@
-<?php
-include "../libs/load.php";
-?>
+<?php include "../libs/load.php"; ?>
 
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-<head>
-    <script src="../vendor/assets/js/color-modes.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.112.5">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link href="../vendor/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
-    <script src="vendor/assets/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <style>
-    body {
-        font-family: 'Heebo', sans-serif;
-    }
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="generator" content="Hugo 0.112.5" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<link rel="shortcut icon" type="image/x-icon" href="../asset/icons/icon.ico" />
+		<title>Parko</title>
 
-    .container-content {
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+		<!-- Bootstrap Icons CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Albert+Sans" rel="stylesheet" />
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="../css/header.css" />
+		<link rel="stylesheet" href="../css/footer.css" />
+        <style>
+    body{
+    font-family: 'Albert Sans';
+}
+
+[data-bs-scheme="light"] {
+    background-color: #ffffff;
+}
+
+[data-bs-scheme="dark"] {
+    background-color: #272727;
+    color: #ffffff;
+}
+
+    .container-content.light{
         max-width: 800px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #ffffff;
+        background-color: #C2EDCE;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1{
+        color:#0076BE;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .container-content.dark{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #48BF91;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
-        color: #2b6777;
-        margin-bottom: 20px;
-        text-align: center;
-    }
 
     .key-features {
         margin-top: 40px;
     }
 
     .key-features h2 {
-        color: #2b6777;
+        color: #0076BE;
         margin-bottom: 10px;
     }
 
     .key-features li {
-        color: #2b6777;
         margin-bottom: 10px;
         list-style-type: disc;
         margin-left: 20px;
@@ -75,10 +97,11 @@ include "../libs/load.php";
     }
 
     </style>
-</head>
-<body>
-<?php load_temp("header.php"); ?>
-<div class="container-content">
+	</head>
+
+	<body data-bs-scheme="light">
+		<?php load_temp("header.php"); ?>
+        <div class=" container-content light">
     <h1>Introducing "Parko" - Your Ultimate Parking and Public Space Booking Platform!</h1>
 
     <p>Welcome to Parko, a revolutionary web app that brings convenience and efficiency to your parking and public space needs. Whether you're a busy urbanite, an adventure seeker, or a forward-thinking landlord, Parko is here to transform the way you find, reserve, and utilize parking spaces and public areas.</p>
@@ -96,9 +119,61 @@ include "../libs/load.php";
       </ul>
     </div>
   </div>
+		<?php load_temp("footer.php"); ?>
 
-<?php load_temp("footer.php"); ?>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<!-- Include Popper.js for Bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+		<!-- Include Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+		<script>
+
+                const darkModeSwitch = document.getElementById('dark-mode-switch');
+                const body = document.body;
+                const moonIcon = document.getElementById('moon-icon');
+                const sunIcon = document.getElementById('sun-icon');
+
+                // Function to toggle dark mode styles
+                function toggleDarkMode() {
+                    if (darkModeSwitch.checked) {
+                        body.setAttribute('data-bs-scheme', 'dark');
+                        toggleElementsLightToDark();
+                        moonIcon.style.display = 'none';
+                        sunIcon.style.display = 'inline-block';
+                    } else {
+                        body.setAttribute('data-bs-scheme', 'light');
+                        // Function to toggle elements from light to dark
+                        toggleElementsDarkToLight();
+                        moonIcon.style.display = 'inline-block';
+                        sunIcon.style.display = 'none';
+                    }
+                }
+
+                // Toggle elements from dark to light
+                function toggleElementsDarkToLight() {
+                    const elements = document.querySelectorAll('.dark');
+                    elements.forEach(element => {
+                        element.classList.remove('dark');
+                        element.classList.add('light');
+                    });
+                }
+
+                // Toggle elements from light to dark
+                function toggleElementsLightToDark() {
+                    const elements = document.querySelectorAll('.light');
+                    elements.forEach(element => {
+                        element.classList.remove('light');
+                        element.classList.add('dark');
+                    });
+                }
+
+                // Call the function on page load
+                toggleDarkMode();
+
+                // Listen for dark mode switch changes
+                darkModeSwitch.addEventListener('change', toggleDarkMode);
+            
+		</script>
+	</body>
+</html>
