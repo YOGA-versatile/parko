@@ -150,7 +150,7 @@ include "../libs/load.php";
         </div>
         <div class="card-body">
           <div id="content1" class="content" style="display: none;">
-            <div class="card mb-2 mt-1 book-card light">
+            <div class="card mb-2 mt-1 book-card light custom-card">
               <div class="card-header"> RAM Parking </div>
               <div class="card-body">
                 <p class="card-text">Private Commercial</p>
@@ -165,7 +165,7 @@ include "../libs/load.php";
               </div>
             </div>
 
-            <div class="card mb-2 mt-1 book-card light">
+            <div class="card mb-2 mt-1 book-card light custom-card">
               <div class="card-header"> Yoga Parking </div>
               <div class="card-body">
                 <p class="card-text">Private Residential</p>

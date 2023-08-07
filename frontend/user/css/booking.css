@@ -1,23 +1,20 @@
 body{
-    font-family: 'Heebo';
+    font-family: 'Albert Sans';
 }
 
+[data-bs-scheme="light"] {
+    background-color: #ffffff;
+}
+
+[data-bs-scheme="dark"] {
+    background-color: #272727;
+    color: #ffffff;
+}
 .booking-container{
     align-items: center;
-    border-style: solid;
-    border-color: #2b6777;
-    border-radius: 16px;
+    border: none;
 }
 
-.book-card{
-    margin: 25%;
-    width:50%;
-    align-items: centre;
-}
-
-.book-card .card-body{
-    text-align: center;
-}
 
 .star-rating {
     font-size: 24px; /* Adjust the font size as needed */
@@ -33,3 +30,49 @@ body{
 .gold-star {
     color: gold; /* Gold star color */
 }
+
+.card.light {
+    background-color: #6FB3B8;
+    border-radius: 30px;
+    border:none;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .card .btn-primary{
+    background-color: #0076BE;
+    border:none;
+  }
+  .card .btn-primary:hover{
+    background-color: #0076BE;
+    border:none;
+  }
+  .card.dark {
+    background-color: #388087;
+    border-radius: 30px;
+    border:none;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .card p span {
+    font-weight: bold;
+    color: #007bff;
+  }
+  .card .card-header{
+    background-color: #ffffff;
+  }
+
+  .book-modal{
+    background-color: #F6F6F2;
+    color: #272727;
+  }

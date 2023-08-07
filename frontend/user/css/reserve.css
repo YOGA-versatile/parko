@@ -1,7 +1,15 @@
-body {
-    font-family: 'Heebo';
+body{
+  font-family: 'Albert Sans';
 }
 
+[data-bs-scheme="light"] {
+  background-color: #ffffff;
+}
+
+[data-bs-scheme="dark"] {
+  background-color: #272727;
+  color: #ffffff;
+}
 #star-container{
     color: gold;
 }
@@ -27,21 +35,25 @@ jumbotron {
     border-radius: 16px;
     border-width: 2px;
 }
-.comment-container{
-  border-style: solid;
-  border-color: #52ab98;
-
+.comment-container.light{
+  background-color: #F6F6F2;
+  border-color: #C2EDCE;
+  border-radius: 16px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
-.comment-container .bg-1{
-  text-align: center;
-  background-color: #c8d8e4;
-}
-.comment-container .bg-2{
-  background-color: #c8d8e4;
+.comment-container h1{
+  font-weight: 200;
 }
 .checkout{
   text-align: center;
   position: relative;
+}
+.comment-container.dark{
+  background-color: #272727;
+  border-color: #C2EDCE;
+  border-radius: 16px;
+  color:#ffffff;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -54,4 +66,60 @@ jumbotron {
 
 .black-color {
   color: black;
+}
+.gallery-container.light{
+  border-radius: 16px;
+  border-style: solid;
+  border-color: #272727;
+}
+.gallery-container.dark{
+  border-radius: 16px;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.custom-card {
+  background-color: #4DB4D7;
+  border:none;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.list-group-item {
+  color: #ffffff;
+  background-color: #95D8EB;
+  border: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.list-group-item img {
+  height: 20px;
+  margin-right: 10px;
+}
+.custom-card-right{
+  border-style: solid;
+  border-color:#0076BE ;
+}
+.custom-card-left{
+  text-align: center;
+  border-style: solid;
+  border-color:#0076BE ;
+  border-radius: 16px;
+}
+
+.modal-checkout .modal-header{
+  text-align: center;
+  color: #272727;
+  background-color:antiquewhite;
+
+}
+
+.modal-checkout .modal-body{
+  background-color: #F6F6F2;
+  color: #272727;
 }

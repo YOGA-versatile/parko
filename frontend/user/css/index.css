@@ -38,8 +38,6 @@ body{
     align-items: center;
 }
 .book-card.light{
-    margin: 20%;
-    width:50%;
     align-items: centre;
     background-color: #C2EDCE;
     color: #272727;
@@ -48,8 +46,6 @@ body{
     border-radius: 30px;
 }
 .book-card.dark{
-    margin: 25%;
-    width:50%;
     align-items: centre;
     background-color: #F6F6F2;
     color: #272727;
@@ -175,3 +171,11 @@ body{
     color: #F6F6F2;
     border: none;
 }
+
+.custom-card {
+    border:none;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 20px;
+  }

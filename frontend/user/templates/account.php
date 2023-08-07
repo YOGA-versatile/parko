@@ -32,7 +32,7 @@ include "../libs/load.php";
 			</div>
 		</div>
 
-		<div class="container-content">
+	    <div class="container-content">
         <div class="container container-acc py-1 mt-2 light">
             <div class="row row-cols-1 row-cols-md-3 g-3 mt-2">
                 <!-- Personal Info Card and Modal -->
@@ -42,7 +42,8 @@ include "../libs/load.php";
                         <h5 class="card-title">Personal Info</h5>
                         <p>Your personal details</p>
                     </button>
-                    <div class="modal fade " id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content  card-caro light">
 								<div class="modal-header">
@@ -83,12 +84,14 @@ include "../libs/load.php";
 
                 <!-- Security Policy Card and Modal -->
                 <div class="col">
-                    <button type="button" data-bs-toggle="modal" class="card-button light" data-bs-target="#securityModal">
+                    <button type="button" data-bs-toggle="modal" class="card-button light"
+                        data-bs-target="#securityModal">
                         <i class="bi bi-shield-check"></i>
                         <h5 class="card-title">Security Policy</h5>
                         <p>Security policies of the Parko</p>
                     </button>
-                    <div class="modal fade" id="securityModal" tabindex="-1" aria-labelledby="securityModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="securityModal" tabindex="-1"
+                        aria-labelledby="securityModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content card-caro light">
 								<div class="modal-header">
@@ -139,12 +142,14 @@ include "../libs/load.php";
 
                 <!-- Payments and Payouts Card and Modal -->
                 <div class="col">
-                    <button type="button" data-bs-toggle="modal" class="card-button light" data-bs-target="#paymentModal">
+                    <button type="button" data-bs-toggle="modal" class="card-button light"
+                        data-bs-target="#paymentModal">
                         <i class="bi bi-credit-card"></i>
                         <h5 class="card-title">Payments and Payouts</h5>
                         <p>Review payments, payouts methods</p>
                     </button>
-                    <div class="modal fade " id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="paymentModal" tabindex="-1"
+                        aria-labelledby="paymentModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content card-caro light">
 								<div class="modal-header">
@@ -152,23 +157,23 @@ include "../libs/load.php";
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body">
-        <p>Choose your preferred payment option for making parking reservations:</p>
-        
-        <h4>1. Credit Card</h4>
-        <p>Pay using your credit card. We accept Visa, MasterCard, and American Express.</p>
-        
-        <h4>2. UPI</h4>
-        <p>Use your UPI account for a convenient and secure payment experience.</p>
-        
-        <h4>3. Digital Wallets</h4>
-        <p>Pay with popular digital wallets such as Paytm and Google Pay.</p>
-        
-        <h4>4. Bank Transfer</h4>
-        <p>Transfer funds directly from your bank account to make your reservation.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
+                                    <p>Choose your preferred payment option for making parking reservations:</p>
+                                    
+                                    <h4>1. Credit Card</h4>
+                                    <p>Pay using your credit card. We accept Visa, MasterCard, and American Express.</p>
+                                    
+                                    <h4>2. UPI</h4>
+                                    <p>Use your UPI account for a convenient and secure payment experience.</p>
+                                    
+                                    <h4>3. Digital Wallets</h4>
+                                    <p>Pay with popular digital wallets such as Paytm and Google Pay.</p>
+                                    
+                                    <h4>4. Bank Transfer</h4>
+                                    <p>Transfer funds directly from your bank account to make your reservation.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
 							</div>
 						</div>
                     </div>
@@ -178,12 +183,14 @@ include "../libs/load.php";
             <!-- Earnings Card and Modal -->
             <div class="row row-cols-1 row-cols-md-3 g-3 mt-2">
                 <div class="col">
-                    <button type="button" data-bs-toggle="modal" class="card-button light" data-bs-target="#savedModal">
+                    <button type="button" data-bs-toggle="modal" class="card-button light"
+                        data-bs-target="#savedModal">
                         <i class="bi bi-bookmarks"></i>
                         <h5 class="card-title">Saved</h5>
                         <p>You saved park spaces</p>
                     </button>
-                    <div class="modal fade " id="savedModal" tabindex="-1" aria-labelledby="savedModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="savedModal" tabindex="-1"
+                        aria-labelledby="savedModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content card-caro light">
 								<div class="modal-header">
