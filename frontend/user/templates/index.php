@@ -36,8 +36,13 @@ include "../libs/load.php";
       <div class="row">
         <div class="col-8">
           <form class="d-flex">
-            <label for="searchSpace" class="visually-hidden ">Search</label>
-            <input type="text" class="form-control me-1 search-box" id="searchSpace" placeholder="Search a city..">
+          <label for="searchSpace" class="visually-hidden">Search</label>
+<input type="text" class="form-control me-1 search-box" id="searchSpace" placeholder="Search a city.." list="datalistOptions">
+<datalist id="datalistOptions">
+    <option value="Madurai">
+    <option value="Chennai">
+    <option value="Kovilpatti">
+</datalist>
             <button type="submit" class="btn btn-primary bi bi-search search-button"></button>
           </form>
         </div>
@@ -197,6 +202,35 @@ include "../libs/load.php";
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+
+// $(document).ready(function() {
+//     $('#searchSpace').on('input', function() {
+//         var userInput = $(this).val();
+//         var validValues = $('#datalistOptions option').map(function() {
+//             return $(this).val();
+//         }).get();
+
+//         if (!validValues.includes(userInput)) {
+//             $(this).val('');
+//         }
+//     });
+// });
+$(document).ready(function() {
+    $('#searchSpace').on('input', function() {
+        var userInput = $(this).val().toLowerCase();
+        var validValues = $('#datalistOptions option').map(function() {
+            return $(this).val().toLowerCase();
+        }).get();
+
+        if (!validValues.includes(userInput)) {
+            $(this).val(userInput);
+        }
+    });
+});
+
+
+
+
       
  const darkModeSwitch = document.getElementById('dark-mode-switch');
                 const body = document.body;
@@ -336,6 +370,8 @@ include "../libs/load.php";
       });
       googleStreets.addTo(map);
 
+
+      
 
 
 
