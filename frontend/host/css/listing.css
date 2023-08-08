@@ -45,22 +45,24 @@ body{
     margin: 15%;
     text-align: center;
     border: 1px solid #444444;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #6FB3B8;
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
 }
 
 .dark .book-card .card-header {
-    background-color: #BADFE7;
-    color: #48BF91;
+    background-color: #0076BE;
+    color: whitesmoke;
     font-weight: bold;
     font-size: 22px;
-    border: 1px solid #333333;
+    border: 1px solid #0076BE;
 }
 .dark .book-card .card-body{
-    background-color: #272727;
+    background-color: #F6F6F2;
+    border: #F6F6F2;
 }
 
 .dark .book-card .card-body strong {
-    color: #CCCCCC;
+    color: #48BF91;
 }
 .dark .book-card .card-body span {
     color: #0076BE;
@@ -71,7 +73,6 @@ body{
     border: 1px solid #333333;
 }
 .dark .space-container .card-body{
-    background-color: #333333;
     border: 1px solid #333333;
 }
 

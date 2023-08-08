@@ -1,33 +1,68 @@
 body{
-    font-family: 'Heebo';
+    font-family: 'Albert Sans';
 }
 
+[data-bs-scheme="light"] {
+    background-color: #ffffff;
+}
+
+[data-bs-scheme="dark"] {
+    background-color: #272727;
+    color: #ffffff;
+}
 .container-content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container-acc {
+.container-acc.light {
     width: 80%;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f8f8f8;
 }
+.container-acc.dark {
+    width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: black;
+}
 
-.container-acc button {
-   display: inline-block;
+.card-button.light {
+    display: inline-block;
     padding: 20px;
-    width: 32%;
     border: none;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #C2EDCE;
     transition: all 0.3s ease;
-    background-color: #fff;
     margin: 2px;
     cursor: pointer;
 }
+.card-button.dark {
+    display: inline-block;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #48BF91;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    margin: 2px;
+    cursor: pointer;
+}
+.card-caro.light{
+    background-color: #BADFE7;
+}
+.card-caro.dark{
+    background-color: #0076BE;
+    color:#ffffff;
+}
+
+
 .container-acc button:hover{
     transform: scale(0.95);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -36,20 +71,21 @@ body{
 .container-acc i{
     font-size: 25px;
 }
+.book-card i{
+    color: #FFD700;
+}
 
-/* .button-card {
-    display: inline-block;
-    padding: 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    background-color: #fff;
-    margin: 5px;
-    cursor: pointer;
-  }
+/* Custom CSS for Mobile Responsiveness */
+@media (max-width: 767px) {
+    .card-button {
+        width: 100%; /* Full width on mobile */
+    }
+}
 
-  .button-card:hover {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  } */
+/* Custom CSS for Laptop Responsiveness */
+@media (min-width: 768px) {
+    .container-acc .card-button {
+        width: 90%;
+        height: 90%;
+    }
+}

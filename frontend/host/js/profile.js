@@ -87,8 +87,8 @@ function handleSelectionChange() {
   // For this example, we will just update the numbers with dummy data.
 
   // Dummy data, replace this with your actual data from the database.
-  var dummyNumber1 = "total : 1160";
-  var dummyNumber2 = "total : ₹ 12365";
+  var dummyNumber1 = "Total : 1160";
+  var dummyNumber2 = "Total : ₹ 12365";
 
   document.getElementById("number1").textContent = dummyNumber1;
   document.getElementById("number2").textContent = dummyNumber2;
